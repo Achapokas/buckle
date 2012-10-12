@@ -69,7 +69,7 @@ textarea { overflow: auto; vertical-align: top; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-/* Buckle - CSS Scaffold  Created by Matt Duffy (mttdffy@gmail.com)   */
+/* Buckle - CSS Scaffold  Created by Matt Duffy (mttdffy@gmail.com) https://github.com/mttdffy/buckle  */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
 
 .row { *zoom: 1; margin-left: -20px; width: 960px; position: relative; }
