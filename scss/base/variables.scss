@@ -2,11 +2,11 @@
 // Variables
 // ============================================
 
-$pageWidth : 980px;
-
 $columns: 12;
-$columnWidth: 60px;
-$gutter: 20px;
+$columnWidth: 60px; // 6.383%;
+$gutter: 20px; //2.127%;
+
+$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
 
 $baseFont: Helvetica, Arial, sans-serif;
 $brandFont: Helvetica, Arial, sans-serif ;
