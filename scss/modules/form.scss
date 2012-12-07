@@ -5,6 +5,10 @@
 form {
   .actions {
     padding: 15px 0;
+
+    input {
+      @extend .btn
+    }
   }
 }
 
@@ -16,7 +20,7 @@ label {
 
 input, textarea, select {
   color: $appQuaternaryText;
-  padding: 5px;
+  padding: 3px 5px;
   border: 1px solid $appTertiary;
   @include gradient(#fff, $appQuaternaryLight); //needs adjustment
 }

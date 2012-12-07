@@ -14,20 +14,20 @@ $brandFont: Helvetica, Arial, sans-serif ;
 $btnRadius: 3px;
 
 //Primary
-$appPrimary: #464446;
+$appPrimary: #333;
 $appPrimaryLight: lighten($appPrimary, 20);
 $appPrimaryDark: darken($appPrimary, 20);
 
 //Secondary
 $appSecondary: #55a8d7;
-$appSecondaryLight: lighten($appSecondary, 20);
+$appSecondaryLight: lighten($appSecondary, 30);
 $appSecondaryDark: darken($appSecondary, 20);
 
 $appSecondaryText: #002157;
 
 //Tertiary
-$appTertiary: #98826d;
-$appTertiaryLight: #a79686;
+$appTertiary: #999;
+$appTertiaryLight: #CCC;
 
 
 //Quaternary
@@ -36,4 +36,15 @@ $appQuaternaryLight: #f8f8f8;
 $appQuaternaryDark: #363636;
 
 $appQuaternaryText: #7f7f7f;
+
+//alert colors
+
+$alertSuccess: #85b96b;
+$alertSuccessBg: lighten($alertSuccess, 30);
+
+$alertError: #d07161;
+$alertErrorBg: lighten($alertError, 30);
+
+$alertNotice: #55a8d7;
+$alertNoticeBg: lighten($alertNotice, 30);
 

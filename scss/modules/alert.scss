@@ -4,9 +4,9 @@
 
 .alert {
   margin: 15px 0;
-  border: 1px solid $appSecondary;
-  background: $appSecondaryLight;
-  color: $appSecondary;
+  border: 1px solid $alertNotice;
+  background: $alertNoticeBg;
+  color: $alertNotice;
   font-size: .9em;
   @include addPrefix(border-radius, $btnRadius);
   padding: 5px 10px;
@@ -21,9 +21,17 @@
 }
 
 .alert-error {
-  color: $appPrimaryDark;
-  border-color: $appPrimaryDark;
-  background: #f8cdb2;
+  color: $alertError;
+  border-color: $alertError;
+  background: $alertErrorBg;
 
-  .close { color: $appPrimaryDark; }
+  .close { color: $alertError; }
+}
+
+.alert-success {
+  color: $alertSuccess;
+  border-color: $alertSuccess;
+  background: $alertSuccessBg;
+
+  .close { color: $alertSuccess; }
 }
