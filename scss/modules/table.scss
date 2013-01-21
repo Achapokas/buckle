@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+td, th {
+  padding: 5px;
+}
+
+.table {
+  border-collapse: collapse;
+
+  th {
+    background: #EFEFEF;
+
+  }
+
+  td, th {
+    border: 1px solid #999;
+  }
+}
+
+.table-small {
+  font-size: .8em;
+  td {
+    padding: 3px;
+  }
+}
