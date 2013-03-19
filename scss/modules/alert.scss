@@ -17,6 +17,7 @@
     vertical-align: middle;
     margin-top: -3px;
     cursor: pointer;
+    text-decoration: none
   }
 }
 
@@ -28,7 +29,7 @@
   .close { color: $alertError; }
 }
 
-.alert-success {
+.alert-notice, .alert-success {
   color: $alertSuccess;
   border-color: $alertSuccess;
   background: $alertSuccessBg;

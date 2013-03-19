@@ -8,25 +8,60 @@ th {
 }
 
 td, th {
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border: 1px solid #DDD;
+  @include addPrefix(border-radius, 5px);
 
-  th {
-    background: #EFEFEF;
+  thead {
+    @include addPrefix(border-radius, 5px 5px 0 0);
+  }
 
+  tbody, 
+  tbody tr:last-child {
+    @include addPrefix(border-radius, 0 0 5px 5px);
   }
 
   td, th {
-    border: 1px solid #999;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
   }
+
+  td:first-child,
+  th:first-child  {
+    border-left: none;
+  }
+
+  th {
+    font-weight: bold;
+    font-size: .9em;
+    border-top: 0;
+  }
+
 }
 
 .table-small {
   font-size: .8em;
-  td {
-    padding: 3px;
+  td, th {
+    padding: 3px 5px;
+  }
+}
+
+.table-striped {
+
+  thead {
+    background: #DDD;
+  }
+  tbody {
+    tr:nth-child(odd){
+      background: #fff;
+    }
+    tr:nth-child(even) {
+      background: #f3f3f3;
+    }
+
   }
 }
