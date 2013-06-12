@@ -2,13 +2,25 @@
 // Typography
 // ============================================
 
+//variables
+
+$textColor: $appPrimaryLight;
+$headingColor: $appPrimary;
+
+$linkColor      : #236dc2;
+$linkHoverColor : #2e7ee1;
+
+//
+
 body {
   font-family: $baseFont;
-  color: $appPrimary;
+  color: $textColor;
+  background: $bodyColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  color: $headingColor;
 
   a {
     text-decoration: none;
@@ -38,7 +50,11 @@ h5 {
 }
 
 a {
-  color: $appSecondary;
+  color: $linkColor;
+
+  &:hover {
+    color: $linkHoverColor;
+  }
 }
 
 

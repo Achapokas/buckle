@@ -2,6 +2,20 @@
 // Alert
 // ============================================
 
+//variables
+$alertSuccess: #85b96b;
+$alertSuccessBg: lighten($alertSuccess, 30);
+
+$alertError: #d07161;
+$alertErrorBg: lighten($alertError, 30);
+
+$alertNotice: #55a8d7;
+$alertNoticeBg: lighten($alertNotice, 30);
+
+//modifiers
+
+//modules
+
 .alert {
   margin: 15px 0;
   border: 1px solid $alertNotice;

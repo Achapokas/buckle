@@ -2,18 +2,20 @@
 // Variables
 // ============================================
 
-$columns: 12;
-$columnWidth: 60px; // 6.383%;
-$gutter: 20px; //2.127%;
-
-$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
-
 $baseFont: Helvetica, Arial, sans-serif;
-$brandFont: Helvetica, Arial, sans-serif ;
+$brandFont: Helvetica, Arial, sans-serif;
 
-$btnRadius: 3px;
+$appRadius: 3px;
+
 $darkBackground: #000000;
 $lightBackground: #797979;
+
+$bodyColor : #f6f6f6;
+
+$textColor: #333;
+
+$linkColor      : #236dc2;
+$linkHoverColor : #2e7ee1;
 
 
 //Primary
@@ -22,8 +24,8 @@ $appPrimaryLight: lighten($appPrimary, 20);
 $appPrimaryDark: darken($appPrimary, 20);
 
 //Secondary
-$appSecondary: #55a8d7;
-$appSecondaryLight: lighten($appSecondary, 30);
+$appSecondary: #3a8eef;
+$appSecondaryLight: lighten($appSecondary, 10);
 $appSecondaryDark: darken($appSecondary, 20);
 
 $appSecondaryText: #002157;
@@ -39,15 +41,4 @@ $appQuaternaryLight: #f8f8f8;
 $appQuaternaryDark: #363636;
 
 $appQuaternaryText: #7f7f7f;
-
-//alert colors
-
-$alertSuccess: #85b96b;
-$alertSuccessBg: lighten($alertSuccess, 30);
-
-$alertError: #d07161;
-$alertErrorBg: lighten($alertError, 30);
-
-$alertNotice: #55a8d7;
-$alertNoticeBg: lighten($alertNotice, 30);
 

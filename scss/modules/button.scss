@@ -2,22 +2,38 @@
 // Button
 // ============================================
 
+//variables
+$btnBackground : $appPrimaryDark;
+$btnHighlight  : $appPrimaryLight;
+$btnHover      : $appPrimary;
+
+$btnRadius : $appRadius;
+
+//modifiers
+
+
+//modules
+
 .btn {
   display: inline-block;
   font-size: .9em;
   text-decoration: none;
   background: transparent;
-  @include gradient($appPrimaryDark, $appPrimaryLight);
+  @include gradient($btnBackground, $btnHighlight);
   color: #fff;
-  border: 1px solid $appPrimaryDark;
+  border: 1px solid $btnBackground;
   padding: 5px 10px;
   @include addPrefix(border-radius, $btnRadius);
   //@include addPrefix(box-shadow, 0 2px 1px rgba(0,0,0,0.3));
 
   &:hover, &.active {
+    @include gradient($btnHover, $btnHighlight);
+  }
+
+  &:active {
     color: #fff;
-    border: 1px solid $appPrimaryLight;
-    @include gradient($appPrimaryLight, $appPrimary);
+    border: 1px solid $btnHighlight;
+    @include gradient($btnHighlight, $btnHover);
   }
 }
 
@@ -26,8 +42,12 @@
   border: 1px solid $appSecondaryDark;
 
   &:hover, &.active {
+    @include gradient($appSecondary, $appSecondaryLight);
+  }
+
+  &:active {
     border: 1px solid $appSecondary;
-    @include gradient($appSecondary, $appSecondary);
+    @include gradient($appSecondary, $appSecondaryDark);
   }
 }
 

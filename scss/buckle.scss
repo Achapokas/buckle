@@ -1,59 +1,43 @@
 @import "base/normalize";
 
-
 /*
  * Buckle - CSS Scaffold 
  * Created by Matt Duffy (mttdffy@gmail.com)
  * https://github.com/mttdffy/buckle
- * version 0.0.5 
+ * version 0.5.0
  */
 
 // ============================================
 // Base
 // ============================================
 
-@import "base/variables";
-
-@import "base/mixins";
-
-@import "base/layout";
-
-@import "base/typography";
-
-@import "base/helpers";
+@import 
+  "base/variables",
+  "base/mixins",
+  "base/layout",
+  "base/typography",
+  "base/helpers";
 
 // ============================================
 // Modules
 // ============================================
 
-@import "modules/keyframes";
-
-//logo
-@import "modules/logo";
-
-//nav
-@import "modules/navigation";
-
-//btns
-@import "modules/button";
-
-//forms
-@import "modules/form";
-
-//alerts
-@import "modules/alert";
-
-//tables
-@import "modules/table";
-
-//modals
-@import "modules/modal";
-
-//media object
-@import "modules/media";
+@import 
+  "modules/keyframes",
+  "modules/logo",
+  "modules/list",
+  "modules/navigation",
+  "modules/button",
+  "modules/form",
+  "modules/form_togglebox",
+  "modules/alert",
+  "modules/table",
+  "modules/modal",
+  "modules/media";
 
 // ============================================
 // Pages
 // ============================================
 
-@import "pages/home";
+@import 
+  "pages/home";

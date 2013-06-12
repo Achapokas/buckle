@@ -2,6 +2,15 @@
 // Layout
 // ============================================
 
+//variables
+
+$columns: 12;
+$columnWidth: 60px; // 6.383%;
+$gutter: 20px; //2.127%;
+
+$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
+
+
 * { @include addPrefix(box-sizing, border-box); }
 
 .row {
@@ -43,6 +52,13 @@
   margin: 0 auto;
 }
 
+.shim         { margin: 10px 0; }
+.shim-top     { margin-top: 10px; }
+.shim-bottom  { margin-bottom: 10px; }
+
+.shim-large         { margin: 20px 0; }
+.shim-large-top     { margin-top: 20px; }
+.shim-large-bottom  { margin-bottom: 20px; }
 
 // ============================================
 // High Level Areas
