@@ -307,21 +307,6 @@ select[multiple] { overflow: auto; }
 .toggleactions { width: 24%; padding: 30px 20px 10px; text-align: center; }
 .toggleactions a { margin: 5px 10px; }
 
-.no-js .togglebox { display: none; }
-
-.js .togglefallback { display: none; }
-
-.togglebox { *zoom: 1; }
-.togglebox:before, .togglebox:after { display: table; content: ""; line-height: 0; }
-.togglebox:after { clear: both; }
-.togglebox .box { width: 38%; }
-.togglebox .box p { margin: 3px; color: #69a9f3; }
-.togglebox .box, .togglebox .toggleactions { float: left; }
-.togglebox select { padding: 10px; width: 100%; }
-
-.toggleactions { width: 24%; padding: 30px 20px 10px; text-align: center; }
-.toggleactions a { margin: 5px 10px; }
-
 .alert { margin: 15px 0; border: 1px solid #55a8d7; background: #d1e7f4; color: #55a8d7; font-size: .9em; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; padding: 5px 10px; }
 .alert .close { float: right; font-size: 1.2em; vertical-align: middle; margin-top: -3px; cursor: pointer; text-decoration: none; }
 
