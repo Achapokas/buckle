@@ -1,0 +1,216 @@
+!!! 5
+%body
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Buckle
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "Matt Duffy", :name => "author"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "css/buckle.css", :rel => "stylesheet"}/
+    %script{:src => "js/lib/modernizr.js"}
+  %body
+    .wrapper
+      %header
+        %h1.pull-left
+          %a{:href => "/"} Buckle
+        %nav.pull-right
+          %ul.nav.nav-main
+            %li
+              %a{:href => "#"} Base
+            %li
+              %a{:href => "#"} Modules
+            %li
+              %a{:href => "#"} Pages
+      %section.content
+        .row
+          %article.span8
+            %h2 What is this?
+            %p
+              Buckle is a CSS template meant to be a starting point for any project &ndash; small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
+            %p
+              This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap &ndash; as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
+
+        %h2 Grid
+        .row.row-test
+          .span12
+          .span6
+          .span6
+          .span4
+          .span4
+          .span4
+          .span3
+          .span3
+          .span3
+          .span3
+          .span3
+          .span6
+          .span3
+          .span3
+          .span9
+        
+        / Modal
+        %section.example-section
+          %h2 Modal
+          %a{"data-action" => "modal", :href => "#"} Open Modal
+          #modal.hidden
+            #modal-content.hidden
+              #modal-header.clearfix
+                %span.modal-title
+                %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
+              %section#modal-body
+            .loader.hidden
+
+        %section.example-section
+          %h2 Alerts
+          #alerts
+            .alert.alert-notice
+              Something happended successfully!
+              %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+            .alert.alert-error
+              There was an error doing something!
+              %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+        %section.example-section
+          %h2 Tables
+          
+          .row
+            .span6  
+              %h3 Default Style &mdash; No classes
+              %table
+                %thead
+                  %tr
+                    %th Something
+                    %th Else
+                    %th Here
+                %tbody
+                  %tr
+                    %td 1
+                    %td Abc Def
+                    %td Alpha Beta
+                  %tr
+                    %td 2
+                    %td Ghi Jkl
+                    %td Gamma Delta
+                  %tr
+                    %td 3
+                    %td Mno Pqr
+                    %td Super Duper Uber
+
+            .span6
+              %h3 Basic Style &mdash; "table" class
+              %table.table
+                %thead
+                  %tr
+                    %th Something
+                    %th Else
+                    %th Here
+                %tbody
+                  %tr
+                    %td 1
+                    %td Abc Def
+                    %td Alpha Beta
+                  %tr
+                    %td 2
+                    %td Ghi Jkl
+                    %td Gamma Delta
+                  %tr
+                    %td 3
+                    %td Mno Pqr
+                    %td Super Duper Uber
+
+            .span6
+              %h3 Basic-Small Style &mdash; "table table-small" class
+              %table.table.table-small
+                %thead
+                  %tr
+                    %th Something
+                    %th Else
+                    %th Here
+                %tbody
+                  %tr
+                    %td 1
+                    %td Abc Def
+                    %td Alpha Beta
+                  %tr
+                    %td 2
+                    %td Ghi Jkl
+                    %td Gamma Delta
+                  %tr
+                    %td 3
+                    %td Mno Pqr
+                    %td Super Duper Uber
+
+            .span6
+              %h3 Striped &mdash; "table table-striped" class
+              %table.table.table-striped
+                %thead
+                  %tr
+                    %th Something
+                    %th Else
+                    %th Here
+                %tbody
+                  %tr
+                    %td 1
+                    %td Abc Def
+                    %td Alpha Beta
+                  %tr
+                    %td 2
+                    %td Ghi Jkl
+                    %td Gamma Delta
+                  %tr
+                    %td 3
+                    %td Mno Pqr
+                    %td Super Duper Uber
+        %section.example-section
+          %h2 Forms
+          %form{:action => ""}
+            %label{:for => "example-1"} Input #1
+            %input#example-1{:type => "text"}
+            
+            %label{:for => "example-2"} Input #2
+            %input#example-2{:type => "text"}
+            
+            %label{:for => "example-3"} Input #3
+            %input#example-3{:type => "text"}
+            
+            .actions
+              %input.btn{:type => "submit", :value => "Submit"}
+              %input.btn.btn-link{:type => "button", :value => "Cancel"}/
+
+        %section.example-section
+          %h2 Buttons
+          %p can be applied to input, button, or anchor tags
+          
+          %a.btn{:href => "#"} I'm a standard button
+          %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
+          %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
+
+          %h3 Modifiers
+          
+          .row
+            .span3
+              %h4 Small Button
+              %a.btn.btn-small{:href => "#"} I'm a small button
+            .span3  
+              %h4 Large Button
+              %a.btn.btn-large{:href => "#"} I'm a BIG button
+            .span6
+              %h4 block-level
+              %a.btn.btn-block{:href => "#"} I'm a button at block level!!!!!!!!!!
+            
+      / end .content
+      %footer.shim-large-top
+        %nav.pull-right
+          %ul.nav.nav-footer
+            %li
+              %a{:href => "#"} Base
+            %li
+              %a{:href => "#"} Modules
+            %li
+              %a{:href => "#"} Pages
+        %h5.pull-left &copy; Copyright 2012 Matt Duffy. All Rights Reserved.
+    / end #wrapper
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<\/script>')

@@ -1,287 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<body>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="author" content="Matt Duffy" />
-
-    <link rel="shortcut icon" href="/favicon.ico" />
-    
-    <link rel="stylesheet" href="css/buckle.css"/>
-
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Buckle</title>
+    <meta content="" name="description">
+    <meta content="Matt Duffy" name="author">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="css/buckle.css" rel="stylesheet">
     <script src="js/lib/modernizr.js"></script>
-    
   </head>
-
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="pull-left"><a href="/">Buckle</a></h1>
-        
+        <h1 class="pull-left">
+          <a href="/">Buckle</a>
+        </h1>
         <nav class="pull-right">
           <ul class="nav nav-main">
-            <li><a href="#">Base</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Pages</a></li>
+            <li>
+              <a href="#">Base</a>
+            </li>
+            <li>
+              <a href="#">Modules</a>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+            </li>
           </ul>
         </nav>
       </header>
       <section class="content">
-
         <div class="row">
-          
           <article class="span8">
             <h2>What is this?</h2>
             <p>
               Buckle is a CSS template meant to be a starting point for any project &ndash; small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
             </p>
-
             <p>
               This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap &ndash; as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
             </p>
           </article>
-
         </div>
-        <div class="row">
-
-          <article class="span4">
-            <h2>Base</h2>
-            <p>Info goes here</p>
-          </article>
-
-          <article class="span4">
-            <h2>Modules</h2>
-            <p>Info goes here</p>
-          </article>
-
-          <article class="span4">
-            <h2>Pages</h2>
-            <p>Info goes here</p>
-          </article>
-
-        </div>
-
         <h2>Grid</h2>
-
         <div class="row row-test">
           <div class="span12"></div>
-          
           <div class="span6"></div>
           <div class="span6"></div>
-          
           <div class="span4"></div>
           <div class="span4"></div>
           <div class="span4"></div>
-          
           <div class="span3"></div>
           <div class="span3"></div>
           <div class="span3"></div>
           <div class="span3"></div>
-
           <div class="span3"></div>
           <div class="span6"></div>
           <div class="span3"></div>
-
           <div class="span3"></div>
           <div class="span9"></div>
         </div>
-
         <!-- Modal -->
         <section class="example-section">
           <h2>Modal</h2>
-
-          <a href="#" data-action="modal">Open Modal</a>
-
-          <div id="modal" class="hidden">
-            <div id="modal-content" class="hidden">
-              <div id="modal-header" class="clearfix">
+          <a data-action="modal" href="#">Open Modal</a>
+          <div class="hidden" id="modal">
+            <div class="hidden" id="modal-content">
+              <div class="clearfix" id="modal-header">
                 <span class="modal-title"></span>
-                <a href="#" class="btn-close" data-action="dismiss">&times;</a>
+                <a class="btn-close" data-action="dismiss" href="#">&times;</a>
               </div>
               <section id="modal-body"></section>
             </div>
             <div class="loader hidden"></div>
           </div>
         </section>
-        
         <section class="example-section">
           <h2>Alerts</h2>
-
-          <div id="alerts">  
+          <div id="alerts">
             <div class="alert alert-notice">
               Something happended successfully!
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <a class="close" data-dismiss="alert" href="#">&times;</a>
             </div>
             <div class="alert alert-error">
               There was an error doing something!
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <a class="close" data-dismiss="alert" href="#">&times;</a>
             </div>
           </div>
         </section>
-              
         <section class="example-section">
           <h2>Tables</h2>
-
-          <h3>Default Style &mdash; No classes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Basic Style &mdash; "table" class</h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <h3>Basic-Small Style &mdash; "table table-small" class</h3>
-          <table class="table table-small">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Striped &mdash; "table table-striped" class</h3>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
+          <div class="row">
+            <div class="span6">
+              <h3>Default Style &mdash; No classes</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Something</th>
+                    <th>Else</th>
+                    <th>Here</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abc Def</td>
+                    <td>Alpha Beta</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ghi Jkl</td>
+                    <td>Gamma Delta</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mno Pqr</td>
+                    <td>Super Duper Uber</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="span6">
+              <h3>Basic Style &mdash; "table" class</h3>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Something</th>
+                    <th>Else</th>
+                    <th>Here</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abc Def</td>
+                    <td>Alpha Beta</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ghi Jkl</td>
+                    <td>Gamma Delta</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mno Pqr</td>
+                    <td>Super Duper Uber</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="span6">
+              <h3>Basic-Small Style &mdash; "table table-small" class</h3>
+              <table class="table table-small">
+                <thead>
+                  <tr>
+                    <th>Something</th>
+                    <th>Else</th>
+                    <th>Here</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abc Def</td>
+                    <td>Alpha Beta</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ghi Jkl</td>
+                    <td>Gamma Delta</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mno Pqr</td>
+                    <td>Super Duper Uber</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="span6">
+              <h3>Striped &mdash; "table table-striped" class</h3>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Something</th>
+                    <th>Else</th>
+                    <th>Here</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abc Def</td>
+                    <td>Alpha Beta</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ghi Jkl</td>
+                    <td>Gamma Delta</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mno Pqr</td>
+                    <td>Super Duper Uber</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
-
         <section class="example-section">
           <h2>Forms</h2>
-
           <form action="">
-
             <label for="example-1">Input #1</label>
-            <input type="text" id="example-1">
+            <input id="example-1" type="text">
             <label for="example-2">Input #2</label>
-            <input type="text" id="example-2">
+            <input id="example-2" type="text">
             <label for="example-3">Input #3</label>
-            <input type="text" id="example-3">
-
+            <input id="example-3" type="text">
             <div class="actions">
-              <input type="submit" class="btn" value="Submit">
-              <input type="button" class="btn btn-secondary" value="Cancel"/>
+              <input class="btn" type="submit" value="Submit">
+              <input class="btn btn-link" type="button" value="Cancel">
             </div>
-            
           </form>
         </section>
-
-      </section> <!-- end .content -->
-      
-      <footer>
-
+        <section class="example-section">
+          <h2>Buttons</h2>
+          <p>can be applied to input, button, or anchor tags</p>
+          <a class="btn" href="#">I'm a standard button</a>
+          <a class="btn btn-secondary" href="#">I'm a secondary action button</a>
+          <a class="btn btn-link" href="#">I'm a button styled like a link</a>
+          <h3>Modifiers</h3>
+          <div class="row">
+            <div class="span3">
+              <h4>Small Button</h4>
+              <a class="btn btn-small" href="#">I'm a small button</a>
+            </div>
+            <div class="span3">
+              <h4>Large Button</h4>
+              <a class="btn btn-large" href="#">I'm a BIG button</a>
+            </div>
+            <div class="span6">
+              <h4>block-level</h4>
+              <a class="btn btn-block" href="#">I'm a button at block level!!!!!!!!!!</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- end .content -->
+      <footer class="shim-large-top">
         <nav class="pull-right">
           <ul class="nav nav-footer">
-            <li><a href="#">Base</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Pages</a></li>
+            <li>
+              <a href="#">Base</a>
+            </li>
+            <li>
+              <a href="#">Modules</a>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+            </li>
           </ul>
         </nav>
-
         <h5 class="pull-left">&copy; Copyright 2012 Matt Duffy. All Rights Reserved.</h5>
-
       </footer>
-      
-    </div> <!-- end #wrapper -->
-
-
+    </div>
+    <!-- end #wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/lib/jquery.js"><\/script>')</script>
-    <script src="js/core.js"></script>
+    <script>
+      window.jQuery || document.write('<\/script>')
+    </script>
   </body>
-</html>
+</body>
