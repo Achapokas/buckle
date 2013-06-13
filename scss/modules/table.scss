@@ -1,3 +1,9 @@
+
+$tableBtnRadius: $appRadius;
+
+$tableStripeColor: #f1f1f1;
+$tableStripeHeadColor: $appPrimary;
+
 table {
   width: 100%;
 }
@@ -14,15 +20,15 @@ td, th {
 .table {
   border-collapse: separate;
   border: 1px solid #DDD;
-  @include addPrefix(border-radius, 5px);
+  @include addPrefix(border-radius, $tableBtnRadius);
 
   thead {
-    @include addPrefix(border-radius, 5px 5px 0 0);
+    @include addPrefix(border-radius, $tableBtnRadius $tableBtnRadius 0 0);
   }
 
   tbody, 
   tbody tr:last-child {
-    @include addPrefix(border-radius, 0 0 5px 5px);
+    @include addPrefix(border-radius, 0 0 $tableBtnRadius $tableBtnRadius);
   }
 
   td, th {
@@ -53,14 +59,15 @@ td, th {
 .table-striped {
 
   thead {
-    background: #DDD;
+    background: $tableStripeHeadColor;
+    color: #fff;
   }
   tbody {
     tr:nth-child(odd){
       background: #fff;
     }
     tr:nth-child(even) {
-      background: #f3f3f3;
+      background: $tableStripeColor;
     }
 
   }
