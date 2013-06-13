@@ -3,9 +3,18 @@
 // ============================================
 
 //variables
-$btnBackground : $appPrimaryDark;
-$btnHighlight  : $appPrimaryLight;
-$btnHover      : $appPrimary;
+$btnBackground : $linkHoverColor;
+$btnHighlight  : $linkColor;
+$btnHover      : darken($linkHoverColor, 5);
+$btnTextColor  : white;
+
+$btnSecondaryBackground : #d9d9d9;
+$btnSecondaryHighlight  : lighten($btnSecondaryBackground, 10);
+$btnSecondaryHover      : darken($btnSecondaryBackground, 5);
+$btnSecondaryTextColor  : #777;
+
+
+
 
 $btnRadius : $appRadius;
 
@@ -20,36 +29,52 @@ $btnRadius : $appRadius;
   text-decoration: none;
   background: transparent;
   @include gradient($btnBackground, $btnHighlight);
-  color: #fff;
+  color: $btnTextColor;
   border: 1px solid $btnBackground;
   padding: 5px 10px;
   @include addPrefix(border-radius, $btnRadius);
-  //@include addPrefix(box-shadow, 0 2px 1px rgba(0,0,0,0.3));
+  @include addPrefix(box-shadow, inset 0 1px 0 rgba(255,255,255,0.3));
 
   &:hover, &.active {
+    color: $btnTextColor;
     @include gradient($btnHover, $btnHighlight);
   }
 
   &:active {
-    color: #fff;
+    color: $btnTextColor;
     border: 1px solid $btnHighlight;
     @include gradient($btnHighlight, $btnHover);
   }
 }
 
 .btn-secondary {
-  @include gradient($appSecondaryDark, $appSecondary);
-  border: 1px solid $appSecondaryDark;
+  @include gradient($btnSecondaryBackground, $btnSecondaryHighlight);
+  border: 1px solid $btnSecondaryHover;
+  color: $btnSecondaryTextColor;
 
   &:hover, &.active {
-    @include gradient($appSecondary, $appSecondaryLight);
+    color: $btnSecondaryTextColor;
+    @include gradient($btnSecondaryHover, $btnSecondaryHighlight);
   }
 
   &:active {
-    border: 1px solid $appSecondary;
-    @include gradient($appSecondary, $appSecondaryDark);
+    color: $btnSecondaryTextColor;
+    border: 1px solid $btnSecondaryHighlight;
+    @include gradient($btnSecondaryHighlight, $btnSecondaryHover);
   }
 }
+
+.btn-link,
+.btn-link:hover,
+.btn-link:active,
+.btn-link.active {
+  border: 0;
+  background-color: transparent;
+  background-image: none;
+  color: $btnBackground;
+}
+
+.btn-link:hover { text-decoration: underline; }
 
 .btn-small {
     font-size: .75em;
@@ -57,4 +82,10 @@ $btnRadius : $appRadius;
 
 .btn-large {
   font-size: 1.25em;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
 }

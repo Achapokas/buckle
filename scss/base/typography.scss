@@ -7,8 +7,8 @@
 $textColor: $appPrimaryLight;
 $headingColor: $appPrimary;
 
-$linkColor      : #236dc2;
-$linkHoverColor : #2e7ee1;
+$linkColor      : #3a8eef;
+$linkHoverColor : darken($linkColor, 20);
 
 //
 
