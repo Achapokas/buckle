@@ -2,18 +2,20 @@
 // Variables
 // ============================================
 
-$baseFont: Helvetica, Arial, sans-serif;
-$brandFont: Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400);
+
+$baseFont: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$brandFont: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
 $appRadius: 3px;
 
 $darkBackground: #000000;
 $lightBackground: #797979;
 
-$bodyColor : #f6f6f6;
+$bodyColor : #ffffff;
 
 //Primary
-$appPrimary: #333;
+$appPrimary: #7acf72;
 $appPrimaryLight: lighten($appPrimary, 20);
 $appPrimaryDark: darken($appPrimary, 20);
 

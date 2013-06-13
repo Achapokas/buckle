@@ -4,8 +4,11 @@
 
 //variables
 
-$textColor: $appPrimaryLight;
-$headingColor: $appPrimary;
+
+$headingColor: #333;
+$textColor: lighten($headingColor, 20);
+
+$primaryHeadingColor: $appPrimary;
 
 $linkColor      : #3a8eef;
 $linkHoverColor : darken($linkColor, 20);
@@ -20,6 +23,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  font-family: $brandFont;
+  font-weight: 300;
   color: $headingColor;
 
   a {
@@ -30,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
+  color: $primaryHeadingColor;
 }
 h2 {
   font-size: 1.5em;
