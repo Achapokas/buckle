@@ -10,6 +10,9 @@ $gutter: 20px; //2.127%;
 
 $pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
 
+$shim: 15px;
+$shimLarge: 30px;
+
 
 * { @include addPrefix(box-sizing, border-box); }
 
@@ -34,6 +37,10 @@ $pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
   display: block;
   margin-left: $gutter;
   min-height: 1px;
+
+  [class^="span"]:first-of-type {
+    margin-left: 0;
+  }
 }
 
 //generate layout classes
@@ -52,13 +59,13 @@ $pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
   margin: 0 auto;
 }
 
-.shim         { margin: 10px 0; }
-.shim-top     { margin-top: 10px; }
-.shim-bottom  { margin-bottom: 10px; }
+.shim         { margin: $shim 0; }
+.shim-top     { margin-top: $shim; }
+.shim-bottom  { margin-bottom: $shim; }
 
-.shim-large         { margin: 30px 0; }
-.shim-large-top     { margin-top: 30px; }
-.shim-large-bottom  { margin-bottom: 30px; }
+.shim-large         { margin: $shimLarge 0; }
+.shim-large-top     { margin-top: $shimLarge; }
+.shim-large-bottom  { margin-bottom: $shimLarge; }
 
 // ============================================
 // High Level Areas
