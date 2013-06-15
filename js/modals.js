@@ -1,6 +1,8 @@
-app.modal = (function ($, modal) {
+app.modal = (function ($, global) {
  
+  var modal = global.find('#modal');
   if(modal.length < 1) { return {} }
+    
   if(!modal.is(":hidden")) { modal.addClass("hidden"); }
   
   var container, body, loader;
@@ -11,7 +13,7 @@ app.modal = (function ($, modal) {
 
   // Events
 
-  $(document)
+  global
     .on('click', 'a[data-action=modal]', registerModalTrigger)
     .on("ajax:modal:load", loadContent);
 
@@ -62,4 +64,4 @@ app.modal = (function ($, modal) {
     show: show, hide: hide, hideLoader: hideLoader, loadContent: loadContent
   };
 
-})(jQuery, jQuery('#modal'));
+})(jQuery, jQuery(document));
