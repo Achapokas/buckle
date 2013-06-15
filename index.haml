@@ -350,8 +350,14 @@
               %section.example.hidden{:data => {:toggle => "alerts", :group => "modules"}}
                 %h3 Alerts
                 #alerts
-                  .alert.alert-notice
+                  .alert
+                    Just gotta let you know about this.
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-success
                     Something happended successfully!
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-warning
+                    Watch out! This is something to be careful about.
                     %a.close{"data-dismiss" => "alert", :href => "#"} &times;
                   .alert.alert-error
                     There was an error doing something!

@@ -3,14 +3,17 @@
 // ============================================
 
 //variables
+$alertNotice: #55a8d7;
+$alertNoticeBg: lighten($alertNotice, 30);
+
 $alertSuccess: #85b96b;
 $alertSuccessBg: lighten($alertSuccess, 30);
 
 $alertError: #d07161;
 $alertErrorBg: lighten($alertError, 30);
 
-$alertNotice: #55a8d7;
-$alertNoticeBg: lighten($alertNotice, 30);
+$alertWarning: #e1cb35;
+$alertWarningBg: lighten($alertWarning, 35);
 
 //modifiers
 
@@ -43,10 +46,18 @@ $alertNoticeBg: lighten($alertNotice, 30);
   .close { color: $alertError; }
 }
 
-.alert-notice, .alert-success {
+.alert-success {
   color: $alertSuccess;
   border-color: $alertSuccess;
   background: $alertSuccessBg;
 
   .close { color: $alertSuccess; }
+}
+
+.alert-warning {
+  color: $alertWarning;
+  border-color: $alertWarning;
+  background: $alertWarningBg;
+
+  .close { color: $alertWarning; }
 }

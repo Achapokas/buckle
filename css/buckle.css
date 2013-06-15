@@ -146,7 +146,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body { font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; color: #666666; background: white; }
 
-h1, h2, h3, h4, h5, h6 { margin-top: 0; font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; font-weight: 300; color: #333333; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; font-weight: 300; color: #333333; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: none; color: inherit; }
 
 h1 { font-size: 2em; color: #7acf72; }
@@ -317,8 +317,11 @@ select[multiple] { overflow: auto; }
 .alert-error { color: #d07161; border-color: #d07161; background: #f3dbd7; }
 .alert-error .close { color: #d07161; }
 
-.alert-notice, .alert-success { color: #85b96b; border-color: #85b96b; background: #dbead3; }
-.alert-notice .close, .alert-success .close { color: #85b96b; }
+.alert-success { color: #85b96b; border-color: #85b96b; background: #dbead3; }
+.alert-success .close { color: #85b96b; }
+
+.alert-warning { color: #e1cb35; border-color: #e1cb35; background: #f8f3d0; }
+.alert-warning .close { color: #e1cb35; }
 
 table { width: 100%; }
 
