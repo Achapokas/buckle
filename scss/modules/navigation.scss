@@ -2,16 +2,58 @@
 // Navigation
 // ============================================
 
+//variables
+$navBorderColor: #EEE;
+
 .nav {
   @extend .unstyled;
   margin: 0;
 
   li {
-    display: inline-block;
+    @include inlineblock();
     padding: 5px 0px 5px 10px;
 
     &:first-child {
       padding-left: 0;
+    }
+  }
+}
+
+.nav-vertical {
+
+  li {
+    display: block;
+    padding: 0;
+
+    &:first-child {
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.nav-box {
+  // border: 1px solid $navBorderColor;
+  border-collapse: collapse;
+
+  li {
+    border: 1px solid $navBorderColor;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      background: $navBorderColor;
+    }
+
+    &.active {
+      background: $linkColor;
+      color: white;
     }
   }
 }
