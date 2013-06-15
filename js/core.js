@@ -188,8 +188,6 @@ app.modal = (function ($, modal) {
   modal
     .on("click", "a[data-action=dismiss]", hideModal)
 
-    
-
   function show(content) {
     if(content) { body.html(content) }
     modal.add(container)
@@ -271,12 +269,22 @@ app.modal = (function ($, modal) {
 
     sectionGroup.hide();
     section.show();
+
+    $.event.trigger('toggle:' + group, [toggleTarget]);
   }
 
   //return
   return;
 
 })(jQuery, jQuery(document));
+
+// Example listening to toggle events
+// (function($, global){
+
+//   global.on('toggle:modules', function(e, link){
+//     console.log(link);
+//   })
+// })(jQuery, jQuery(document));
 
 /* **********************************************
      Begin togglebox.js

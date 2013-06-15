@@ -78,6 +78,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .row:after { clear: both; }
 
 .row-test [class^="span"] { height: 20px; margin-bottom: 10px; background: #7acf72; }
+.row-test [class^="span"] .row [class^="span"] { background: #666; height: 10px; }
 
 [class^="span"] { float: left; display: block; margin-left: 20px; min-height: 1px; }
 
@@ -212,38 +213,6 @@ li p, li li { font-size: 1em; }
 .shim-large-bottom { margin-bottom: 30px; }
 
 .caret { display: inline-block; width: 0; height: 0; vertical-align: top; border-top: 4px solid #7acf72; border-right: 4px solid transparent; border-left: 4px solid transparent; content: ""; }
-
-@-webkit-keyframes fadeIn { 0% { opacity: 0; }
-  100% { opacity: 1; } }
-
-@-moz-keyframes fadeIn { 0% { opacity: 0; }
-  100% { opacity: 1; } }
-
-@-ms-keyframes fadeIn { 0% { opacity: 0; }
-  100% { opacity: 1; } }
-
-@keyframes fadeIn { 0% { opacity: 0; }
-  100% { opacity: 1; } }
-
-@-webkit-keyframes slideDown { 0% { opacity: 0; top: -600px; }
-  30% { opacity: 0; }
-  80% { top: 0; }
-  100% { opacity: 1; } }
-
-@-moz-keyframes slideDown { 0% { opacity: 0; top: -600px; }
-  30% { opacity: 0; }
-  80% { top: 0; }
-  100% { opacity: 1; } }
-
-@-ms-keyframes slideDown { 0% { opacity: 0; top: -600px; }
-  30% { opacity: 0; }
-  80% { top: 0; }
-  100% { opacity: 1; } }
-
-@keyframes slideDown { 0% { opacity: 0; top: -600px; }
-  30% { opacity: 0; }
-  80% { top: 0; }
-  100% { opacity: 1; } }
 
 .logo { display: block; height: 100px; width: 200px; text-indent: -9999px; margin-top: 35px; background: url(../img/logo.png); }
 

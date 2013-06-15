@@ -30,6 +30,11 @@ $shimLarge: 30px;
   height: 20px;
   margin-bottom: 10px;
   background: $appPrimary;
+
+  .row [class^="span"] { 
+    background: #666; 
+    height: 10px;
+  }
 }
 
 [class^="span"] {
