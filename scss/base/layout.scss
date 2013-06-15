@@ -57,38 +57,3 @@ $shimLarge: 30px;
   margin: 0 auto;
 }
 
-.shim         { margin: $shim 0; }
-.shim-top     { margin-top: $shim; }
-.shim-bottom  { margin-bottom: $shim; }
-
-.shim-large         { margin: $shimLarge 0; }
-.shim-large-top     { margin-top: $shimLarge; }
-.shim-large-bottom  { margin-bottom: $shimLarge; }
-
-// ============================================
-// High Level Areas
-// ============================================
-
-header,
-.content,
-footer {
-  @include applyClearfix();
-}
-
-//header
-
-header {
-
-}
-
-//content
-
-.content {
-
-}
-
-//footer
-
-footer {
-
-}
