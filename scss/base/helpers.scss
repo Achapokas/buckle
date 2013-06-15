@@ -20,17 +20,17 @@
 .pull-right {float: right;}
 
 .hidden { display: none !important; }
-.inivisible { visibility: hidden; }
+.inivisible { visibility: hidden !important; }
 
 .affix { position: fixed; }
 
-.shim         { margin: $shim 0; }
-.shim-top     { margin-top: $shim; }
-.shim-bottom  { margin-bottom: $shim; }
+.shim         { margin: $shim 0 !important; }
+.shim-top     { margin-top: $shim !important; }
+.shim-bottom  { margin-bottom: $shim !important; }
 
-.shim-large         { margin: $shimLarge 0; }
-.shim-large-top     { margin-top: $shimLarge; }
-.shim-large-bottom  { margin-bottom: $shimLarge; }
+.shim-large         { margin: $shimLarge 0 !important; }
+.shim-large-top     { margin-top: $shimLarge !important; }
+.shim-large-bottom  { margin-bottom: $shimLarge !important; }
 
 // symbols
 

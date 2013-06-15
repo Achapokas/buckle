@@ -1,7 +1,7 @@
 
 $tableBtnRadius: $appRadius;
-
-$tableStripeColor: #f1f1f1;
+$tableBorderColor: $appBorderColor;
+$tableStripeColor: $appShadeColor;
 $tableStripeHeadColor: $appPrimary;
 
 table {
@@ -19,7 +19,7 @@ td, th {
 
 .table {
   border-collapse: separate;
-  border: 1px solid #DDD;
+  border: 1px solid $tableBorderColor;
   @include addPrefix(border-radius, $tableBtnRadius);
 
   thead {
@@ -32,8 +32,8 @@ td, th {
   }
 
   td, th {
-    border-top: 1px solid #DDD;
-    border-left: 1px solid #DDD;
+    border-top: 1px solid $tableBorderColor;
+    border-left: 1px solid $tableBorderColor;
   }
 
   td:first-child,
