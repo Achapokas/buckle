@@ -18,8 +18,6 @@ app.modal = (function ($, modal) {
   modal
     .on("click", "a[data-action=dismiss]", hideModal)
 
-    
-
   function show(content) {
     if(content) { body.html(content) }
     modal.add(container)

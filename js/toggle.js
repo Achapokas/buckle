@@ -29,9 +29,19 @@
 
     sectionGroup.hide();
     section.show();
+
+    $.event.trigger('toggle:' + group, [toggleTarget]);
   }
 
   //return
   return;
 
 })(jQuery, jQuery(document));
+
+// Example listening to toggle events
+// (function($, global){
+
+//   global.on('toggle:modules', function(e, link){
+//     console.log(link);
+//   })
+// })(jQuery, jQuery(document));
