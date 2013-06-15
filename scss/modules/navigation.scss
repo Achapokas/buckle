@@ -117,13 +117,12 @@ $navBorderRadius: $appRadius;
 
 .nav-bordered {
 
-  float: right;
-  margin-top: -5px;
+  li { padding: 5px 0; }
 
   a {
     border-left: 1px solid $navBorderColor;
     padding-left: 8px;
-    margin-left: -4px;
+    padding: 0 10px;
   }
 
   li:first-child a {

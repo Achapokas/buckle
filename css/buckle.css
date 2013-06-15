@@ -220,10 +220,16 @@ li p, li li { font-size: 1em; }
 
 .unstyled, .nav { padding-left: 0; }
 .unstyled li, .nav li { list-style: none; }
+.unstyled ul, .nav ul, .unstyled ol, .nav ol { padding-left: 10px; }
 
-.list li { padding-left: 15px; margin: 5px 0; list-style-position: inside; }
+ul ul, ul ol, ol ul, ol ol { padding-left: 15px; }
 
-.list-horizontal li { display: inline-block; zoom: 1; *display: inline; }
+.list { padding-left: 15px; }
+.list li { padding-left: 5px; margin: 5px 0; list-style-position: outside; }
+.list ul, .list ol { padding-left: 15px; }
+
+.list-horizontal { margin-left: 0; }
+.list-horizontal li { display: inline-block; zoom: 1; *display: inline; list-style: none; }
 .list-horizontal li:first-child { padding-left: 0px; }
 
 .nav { margin: 0; }
@@ -250,8 +256,8 @@ li p, li li { font-size: 1em; }
 .nav-feature a { text-decoration: none; color: #3a8eef; }
 .nav-feature a.active { color: #7acf72; position: relative; }
 
-.nav-bordered { float: right; margin-top: -5px; }
-.nav-bordered a { border-left: 1px solid #dddddd; padding-left: 8px; margin-left: -4px; }
+.nav-bordered li { padding: 5px 0; }
+.nav-bordered a { border-left: 1px solid #dddddd; padding-left: 8px; padding: 0 10px; }
 .nav-bordered li:first-child a { border-left: 0; }
 
 .btn { display: inline-block; font-size: .9em; text-decoration: none; background: transparent; background-color: #2475d1; background-image: linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -o-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -moz-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -webkit-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -ms-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); color: white; border: 1px solid #0f5cb4; padding: 5px 10px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); }

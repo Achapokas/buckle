@@ -90,7 +90,11 @@
             .span3
               %ul.nav.nav-vertical.nav-box
                 %li
-                  %a.active{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
+                  %a.active{:href => "#", :data => {:action => "toggle", :target => "lists", :group => "modules"}} Lists
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "navigation", :group => "modules"}} Navigation
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
                 %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
                 %li
@@ -101,7 +105,126 @@
                   %a{:href => "#", :data => {:action => "toggle", :target => "modals", :group => "modules"}} Modals
 
             .span9
-              %section.example{:data => {:toggle => "tables", :group => "modules"}}
+              %section.example{:data => {:toggle => "lists", :group => "modules"}}
+                %h3 Lists
+                %p When don't you need to list something for your website &ndash; features, instructions, summaries. There a necessity, and thats why Buckle provides you with a couple list types out of the box.
+
+                .row
+                  .span3
+                    %h4 Standard ul List
+                    %ul
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+                  .span3
+                    %h4 A "ul", class "unstyled"
+                    %ul.unstyled
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two - This is the second list item for the sublist under the second item in the main list.
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+                  .span3
+                    %h4 A "ul", class "list"
+                    %ol.list
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two - This is the second list item for the sublist under the second item in the main list. 
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+
+                  .span6
+                    %h4 A "ul", class "list"
+                    %ul.list.list-horizontal
+                      %li One
+                      %li Two
+                      %li Three 
+                      %li Four 
+                      %li Five 
+              %section.example.hidden{:data => {:toggle => "navigation", :group => "modules"}}
+                %h3 Navigation
+                %p Any set of links should be considered a type of navigation. With the base types of navigation provided here, you should be able to get 90% to what your navigation will need to look like. By subclasses these classes, you should be able to achieve any type of navigation type with very few added lines of CSS.
+
+                .row
+                  .span4
+                    %h4 Basic Navigation
+                    %ul.nav
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Bordered Navigation
+                    %ul.nav.nav-bordered
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Box Navigation
+                    %ul.nav.nav-box
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span5
+                    %h4 Feature Navigation
+                    %ul.nav.nav-feature
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                  
+                  .span4
+                    %h4 Vertical Navigation
+                    %ul.nav.nav-vertical
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Putting it together
+                    %p look familiar?
+                    %ul.nav.nav-box.nav-vertical
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career                
+              %section.example.hidden{:data => {:toggle => "tables", :group => "modules"}}
                 %h3 Tables
             
                 %h4 Default Style &mdash; No classes

@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <body>
   <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Buckle</title>
-    <meta content='' name='description'>
-    <meta content='Matt Duffy' name='author'>
-    <link href='/favicon.ico' rel='shortcut icon'>
-    <link href='css/buckle.css' rel='stylesheet'>
-    <script src='js/lib/modernizr.js'></script>
+    <meta content="" name="description">
+    <meta content="Matt Duffy" name="author">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="css/buckle.css" rel="stylesheet">
+    <script src="js/lib/modernizr.js"></script>
   </head>
   <body>
     <header>
-      <div class='container'>
-        <h1 class='pull-left'>
-          <a href='/'>Buckle</a>
+      <div class="container">
+        <h1 class="pull-left">
+          <a href="/">Buckle</a>
         </h1>
-        <nav class='pull-right'>
-          <ul class='nav nav-feature'>
+        <nav class="pull-right">
+          <ul class="nav nav-feature">
             <li>
-              <a href='#intro'>What is it?</a>
+              <a href="#intro">What is it?</a>
             </li>
             <li>
-              <a href='#grid'>Grid</a>
+              <a href="#grid">Grid</a>
             </li>
             <li>
-              <a href='#components'>Components</a>
+              <a href="#components">Components</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <section class='hero' id='intro'>
-      <div class='container'>
-        <div class='row'>
-          <article class='span8'>
+    <section class="hero" id="intro">
+      <div class="container">
+        <div class="row">
+          <article class="span8">
             <h2>What is this?</h2>
             <p>
               Buckle is a CSS template meant to be a starting point for any project &ndash; small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
@@ -47,87 +47,257 @@
         </div>
       </div>
     </section>
-    <section class='container content'>
-      <article id='grid'>
+    <section class="container content">
+      <article id="grid">
         <h2>Grid</h2>
         <p>Flexible. Nestable. Layout your pages in no time.</p>
-        <div class='row row-test'>
-          <div class='span12'></div>
-          <div class='span6'></div>
-          <div class='span6'>
-            <div class='row'>
-              <div class='span3'></div>
-              <div class='span3'></div>
+        <div class="row row-test">
+          <div class="span12"></div>
+          <div class="span6"></div>
+          <div class="span6">
+            <div class="row">
+              <div class="span3"></div>
+              <div class="span3"></div>
             </div>
           </div>
-          <div class='span4'></div>
-          <div class='span4'></div>
-          <div class='span4'></div>
-          <div class='span3'></div>
-          <div class='span3'></div>
-          <div class='span3'></div>
-          <div class='span3'></div>
-          <div class='span3'></div>
-          <div class='span6'></div>
-          <div class='span3'>
-            <div class='row'>
-              <div class='span2'></div>
-              <div class='span1'></div>
+          <div class="span4"></div>
+          <div class="span4"></div>
+          <div class="span4"></div>
+          <div class="span3"></div>
+          <div class="span3"></div>
+          <div class="span3"></div>
+          <div class="span3"></div>
+          <div class="span3"></div>
+          <div class="span6"></div>
+          <div class="span3">
+            <div class="row">
+              <div class="span2"></div>
+              <div class="span1"></div>
             </div>
           </div>
-          <div class='span3'></div>
-          <div class='span9'>
-            <div class='row'>
-              <div class='span6'></div>
-              <div class='span3'></div>
+          <div class="span3"></div>
+          <div class="span9">
+            <div class="row">
+              <div class="span6"></div>
+              <div class="span3"></div>
             </div>
           </div>
-          <div class='span2'></div>
-          <div class='span8'></div>
-          <div class='span2'></div>
-          <div class='span6'></div>
-          <div class='span2'></div>
-          <div class='span2'></div>
-          <div class='span2'></div>
-          <div class='span8'></div>
-          <div class='span1'></div>
-          <div class='span1'></div>
-          <div class='span2'></div>
+          <div class="span2"></div>
+          <div class="span8"></div>
+          <div class="span2"></div>
+          <div class="span6"></div>
+          <div class="span2"></div>
+          <div class="span2"></div>
+          <div class="span2"></div>
+          <div class="span8"></div>
+          <div class="span1"></div>
+          <div class="span1"></div>
+          <div class="span2"></div>
         </div>
       </article>
-      <article id='components'>
-        <ul class='nav nav-box shim-large'>
+      <article id="components">
+        <ul class="nav nav-box shim-large">
           <li>
-            <a class='active' data-action='toggle' data-group='components' data-target='modules' href='#modules'>Modules</a>
+            <a class="active" data-action="toggle" data-group="components" data-target="modules" href="#modules">Modules</a>
           </li>
           <li>
-            <a data-action='toggle' data-group='components' data-target='containers' href='#containers'>Containers</a>
+            <a data-action="toggle" data-group="components" data-target="containers" href="#containers">Containers</a>
           </li>
         </ul>
-        <section data-group='components' data-toggle='modules'>
-          <h2 class='shim'>Modules</h2>
-          <div class='row'>
-            <div class='span3'>
-              <ul class='nav nav-vertical nav-box'>
+        <section data-group="components" data-toggle="modules">
+          <h2 class="shim">Modules</h2>
+          <div class="row">
+            <div class="span3">
+              <ul class="nav nav-vertical nav-box">
                 <li>
-                  <a class='active' data-action='toggle' data-group='modules' data-target='tables' href='#'>Tables</a>
+                  <a class="active" data-action="toggle" data-group="modules" data-target="lists" href="#">Lists</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='modules' data-target='forms' href='#'>Forms</a>
+                  <a data-action="toggle" data-group="modules" data-target="navigation" href="#">Navigation</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='modules' data-target='buttons' href='#'>Buttons</a>
+                  <a data-action="toggle" data-group="modules" data-target="tables" href="#">Tables</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='modules' data-target='alerts' href='#'>Alerts</a>
+                  <a data-action="toggle" data-group="modules" data-target="forms" href="#">Forms</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='modules' data-target='modals' href='#'>Modals</a>
+                  <a data-action="toggle" data-group="modules" data-target="buttons" href="#">Buttons</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="alerts" href="#">Alerts</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="modals" href="#">Modals</a>
                 </li>
               </ul>
             </div>
-            <div class='span9'>
-              <section class='example' data-group='modules' data-toggle='tables'>
+            <div class="span9">
+              <section class="example" data-group="modules" data-toggle="lists">
+                <h3>Lists</h3>
+                <p>When don't you need to list something for your website &ndash; features, instructions, summaries. There a necessity, and thats why Buckle provides you with a couple list types out of the box.</p>
+                <div class="row">
+                  <div class="span3">
+                    <h4>Standard ul List</h4>
+                    <ul>
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ul>
+                  </div>
+                  <div class="span3">
+                    <h4>A "ul", class "unstyled"</h4>
+                    <ul class="unstyled">
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two - This is the second list item for the sublist under the second item in the main list.</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ul>
+                  </div>
+                  <div class="span3">
+                    <h4>A "ul", class "list"</h4>
+                    <ol class="list">
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two - This is the second list item for the sublist under the second item in the main list.</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ol>
+                  </div>
+                  <div class="span6">
+                    <h4>A "ul", class "list"</h4>
+                    <ul class="list list-horizontal">
+                      <li>One</li>
+                      <li>Two</li>
+                      <li>Three</li>
+                      <li>Four</li>
+                      <li>Five</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="navigation">
+                <h3>Navigation</h3>
+                <p>Any set of links should be considered a type of navigation. With the base types of navigation provided here, you should be able to get 90% to what your navigation will need to look like. By subclasses these classes, you should be able to achieve any type of navigation type with very few added lines of CSS.</p>
+                <div class="row">
+                  <div class="span4">
+                    <h4>Basic Navigation</h4>
+                    <ul class="nav">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Bordered Navigation</h4>
+                    <ul class="nav nav-bordered">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Box Navigation</h4>
+                    <ul class="nav nav-box">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span5">
+                    <h4>Feature Navigation</h4>
+                    <ul class="nav nav-feature">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Vertical Navigation</h4>
+                    <ul class="nav nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Putting it together</h4>
+                    <p>look familiar?</p>
+                    <ul class="nav nav-box nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="tables">
                 <h3>Tables</h3>
                 <h4>Default Style &mdash; No classes</h4>
                 <table>
@@ -157,7 +327,7 @@
                   </tbody>
                 </table>
                 <h4>Basic Style &mdash; "table" class</h4>
-                <table class='table'>
+                <table class="table">
                   <thead>
                     <tr>
                       <th>Something</th>
@@ -184,7 +354,7 @@
                   </tbody>
                 </table>
                 <h4>Basic-Small Style &mdash; "table table-small" class</h4>
-                <table class='table table-small'>
+                <table class="table table-small">
                   <thead>
                     <tr>
                       <th>Something</th>
@@ -211,7 +381,7 @@
                   </tbody>
                 </table>
                 <h4>Striped &mdash; "table table-striped" class</h4>
-                <table class='table table-striped'>
+                <table class="table table-striped">
                   <thead>
                     <tr>
                       <th>Something</th>
@@ -238,107 +408,107 @@
                   </tbody>
                 </table>
               </section>
-              <section class='example hidden' data-group='modules' data-toggle='forms'>
+              <section class="example hidden" data-group="modules" data-toggle="forms">
                 <h3>Forms</h3>
-                <form action=''>
-                  <label for='example-1'>Input #1</label>
-                  <input id='example-1' type='text'>
-                  <label for='example-2'>Input #2</label>
-                  <input id='example-2' type='text'>
-                  <label for='example-3'>Input #3</label>
-                  <input id='example-3' type='text'>
-                  <div class='actions'>
-                    <input class='btn' type='submit' value='Submit'>
-                    <input class='btn btn-link' type='button' value='Cancel'>
+                <form action="">
+                  <label for="example-1">Input #1</label>
+                  <input id="example-1" type="text">
+                  <label for="example-2">Input #2</label>
+                  <input id="example-2" type="text">
+                  <label for="example-3">Input #3</label>
+                  <input id="example-3" type="text">
+                  <div class="actions">
+                    <input class="btn" type="submit" value="Submit">
+                    <input class="btn btn-link" type="button" value="Cancel">
                   </div>
                 </form>
               </section>
-              <section class='example hidden' data-group='modules' data-toggle='buttons'>
+              <section class="example hidden" data-group="modules" data-toggle="buttons">
                 <h3>Buttons</h3>
                 <p>can be applied to input, button, or anchor tags</p>
-                <a class='btn' href='#'>I'm a standard button</a>
-                <a class='btn btn-secondary' href='#'>I'm a secondary action button</a>
-                <a class='btn btn-link' href='#'>I'm a button styled like a link</a>
+                <a class="btn" href="#">I'm a standard button</a>
+                <a class="btn btn-secondary" href="#">I'm a secondary action button</a>
+                <a class="btn btn-link" href="#">I'm a button styled like a link</a>
                 <h4>Modifiers</h4>
-                <div class='row'>
-                  <div class='span4'>
+                <div class="row">
+                  <div class="span4">
                     <h4>Small Button</h4>
-                    <a class='btn btn-small' href='#'>Save all changes</a>
+                    <a class="btn btn-small" href="#">Save all changes</a>
                   </div>
-                  <div class='span5'>
+                  <div class="span5">
                     <h4>Large Button</h4>
-                    <a class='btn btn-large' href='#'>Sign Up Today!</a>
+                    <a class="btn btn-large" href="#">Sign Up Today!</a>
                   </div>
-                  <div class='span9'>
+                  <div class="span9">
                     <h4>block-level</h4>
-                    <a class='btn btn-block' href='#'>I Accept the Terms &amp; Conditions. Lets Do This!</a>
+                    <a class="btn btn-block" href="#">I Accept the Terms &amp; Conditions. Lets Do This!</a>
                   </div>
                 </div>
               </section>
-              <section class='example hidden' data-group='modules' data-toggle='alerts'>
+              <section class="example hidden" data-group="modules" data-toggle="alerts">
                 <h3>Alerts</h3>
-                <div id='alerts'>
-                  <div class='alert alert-notice'>
+                <div id="alerts">
+                  <div class="alert alert-notice">
                     Something happended successfully!
-                    <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
                   </div>
-                  <div class='alert alert-error'>
+                  <div class="alert alert-error">
                     There was an error doing something!
-                    <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
                   </div>
                 </div>
               </section>
-              <section class='example hidden' data-group='modules' data-toggle='modals'>
+              <section class="example hidden" data-group="modules" data-toggle="modals">
                 <h3>Modal</h3>
                 <p>You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.</p>
-                <a class='btn' data-action='modal' href='#some_content'>Load Local Content</a>
-                <a class='btn' data-action='modal' data-url='ajax.html' href='#'>Load Remote Content</a>
-                <div class='hidden' id='some_content'>
+                <a class="btn" data-action="modal" href="#some_content">Load Local Content</a>
+                <a class="btn" data-action="modal" data-url="ajax.html" href="#">Load Remote Content</a>
+                <div class="hidden" id="some_content">
                   <h2>This is modal content!</h2>
                   <p>
                     Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
                   </p>
                 </div>
-                <div class='modal hidden'>
-                  <div class='wrapper hidden'>
-                    <div class='header clearfix'>
-                      <span class='title'></span>
-                      <a class='btn-close' data-action='dismiss' href='#'>&times;</a>
+                <div class="modal hidden">
+                  <div class="wrapper hidden">
+                    <div class="header clearfix">
+                      <span class="title"></span>
+                      <a class="btn-close" data-action="dismiss" href="#">&times;</a>
                     </div>
-                    <section class='body'></section>
+                    <section class="body"></section>
                   </div>
-                  <div class='loader hidden'></div>
+                  <div class="loader hidden"></div>
                 </div>
               </section>
             </div>
           </div>
         </section>
-        <section class='hidden' data-group='components' data-toggle='containers'>
-          <h2 class='shim'>Containers</h2>
-          <div class='row'>
-            <div class='span3'>
-              <ul class='nav nav-vertical nav-box'>
+        <section class="hidden" data-group="components" data-toggle="containers">
+          <h2 class="shim">Containers</h2>
+          <div class="row">
+            <div class="span3">
+              <ul class="nav nav-vertical nav-box">
                 <li>
-                  <a class='active' data-action='toggle' data-group='containers' data-target='highlevel' href='#'>High Level</a>
+                  <a class="active" data-action="toggle" data-group="containers" data-target="highlevel" href="#">High Level</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='containers' data-target='hero' href='#'>Hero</a>
+                  <a data-action="toggle" data-group="containers" data-target="hero" href="#">Hero</a>
                 </li>
                 <li>
-                  <a data-action='toggle' data-group='containers' data-target='navbar' href='#'>NavBar</a>
+                  <a data-action="toggle" data-group="containers" data-target="navbar" href="#">NavBar</a>
                 </li>
               </ul>
             </div>
-            <div class='span9'>
-              <section class='example' data-group='containers' data-toggle='highlevel'>
+            <div class="span9">
+              <section class="example" data-group="containers" data-toggle="highlevel">
                 <h3>High Level Containers</h3>
                 <p>Doobie Do</p>
               </section>
-              <section class='example hidden' data-group='containers' data-toggle='hero'>
+              <section class="example hidden" data-group="containers" data-toggle="hero">
                 <h3>Hero Container</h3>
                 <p>SUPERMAN!</p>
               </section>
-              <section class='example hidden' data-group='containers' data-toggle='navbar'>
+              <section class="example hidden" data-group="containers" data-toggle="navbar">
                 <h3>NavBar Container</h3>
                 <p>Bars for all the navs</p>
               </section>
@@ -347,28 +517,28 @@
         </section>
       </article>
     </section>
-    <footer class='shim-large-top'>
-      <div class='container'>
-        <nav class='pull-right'>
-          <ul class='nav nav-bordered'>
+    <footer class="shim-large-top">
+      <div class="container">
+        <nav class="pull-right">
+          <ul class="nav nav-bordered">
             <li>
-              <a href='#intro'>What is it?</a>
+              <a href="#intro">What is it?</a>
             </li>
             <li>
-              <a href='#grid'>Grid</a>
+              <a href="#grid">Grid</a>
             </li>
             <li>
-              <a href='#components'>Components</a>
+              <a href="#components">Components</a>
             </li>
           </ul>
         </nav>
-        <h5 class='pull-left'>&copy; Copyright 2013 Matt Duffy. All Rights Reserved.</h5>
+        <h5 class="pull-left">&copy; Copyright 2013 Matt Duffy. All Rights Reserved.</h5>
       </div>
     </footer>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>
       window.jQuery || document.write('<\/script>')
     </script>
-    <script src='js/core.js'></script>
+    <script src="js/core.js"></script>
   </body>
 </body>
