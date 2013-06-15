@@ -275,14 +275,22 @@
           </section>
           <section class='example hidden' data-group='modules' data-toggle='modals'>
             <h3>Modal</h3>
-            <a data-action='modal' href='#'>Open Modal</a>
-            <div class='hidden' id='modal'>
-              <div class='hidden' id='modal-content'>
-                <div class='clearfix' id='modal-header'>
-                  <span class='modal-title'></span>
+            <p>You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.</p>
+            <a class='btn' data-action='modal' href='#some_content'>Load Local Content</a>
+            <a class='btn' data-action='modal' data-url='ajax.html' href='#'>Load Remote Content</a>
+            <div class='hidden' id='some_content'>
+              <h2>This is modal content!</h2>
+              <p>
+                Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
+              </p>
+            </div>
+            <div class='modal hidden'>
+              <div class='wrapper hidden'>
+                <div class='header clearfix'>
+                  <span class='title'></span>
                   <a class='btn-close' data-action='dismiss' href='#'>&times;</a>
                 </div>
-                <section id='modal-body'></section>
+                <section class='body'></section>
               </div>
               <div class='loader hidden'></div>
             </div>

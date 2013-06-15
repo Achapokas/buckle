@@ -55,7 +55,6 @@ $shimLarge: 30px;
     .offset#{$i} { margin-left: ($columnWidth * $i) + ($gutter * ($i + 1));}
 }
 
-.wrapper, 
 .container {
   width: $pageWidth;
   padding: $gutter;

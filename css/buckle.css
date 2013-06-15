@@ -142,7 +142,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .offset12 { margin-left: 980px; }
 
-.wrapper, .container { width: 980px; padding: 20px; margin: 0 auto; }
+.container { width: 980px; padding: 20px; margin: 0 auto; }
 
 body { font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; color: #666666; background: white; }
 
@@ -330,17 +330,14 @@ td, th { padding: 5px 10px; }
 .table-striped tbody tr:nth-child(odd) { background: #fff; }
 .table-striped tbody tr:nth-child(even) { background: #f1f1f1; }
 
-#modal { position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: rgba(0, 0, 0, 0.8); z-index: 500; }
+.modal { position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: rgba(0, 0, 0, 0.8); z-index: 500; }
+.modal .wrapper { width: 800px; max-height: 80%; position: absolute; left: 50%; top: 10%; margin-left: -400px; border: solid 1px #7acf72; background: white; overflow: auto; }
+.modal .header { background-color: #7acf72; height: 30px; position: fixed; width: 798px; }
+.modal .header .title { float: left; font-size: 0.8em; color: white; padding-left: 7px 0 0 15px; }
+.modal .header > .btn-close { display: block; text-decoration: none; font-weight: bold; font-size: 1.2em; padding: 3px 10px 0 0; position: absolute; right: 0; top: 0; color: white; }
+.modal .body { padding: 8px 15px 15px; width: 99%; max-height: 80%; background: white; overflow: auto; margin-top: 40px; }
 
 .loader { display: block; height: 42px; width: 42px; position: absolute; left: 50%; top: 50%; margin-left: -21px; margin-top: -21px; padding: 5px; background: black url(../imgs/ajax-loader.gif) no-repeat 5px 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
-
-#modal-content { width: 800px; max-height: 80%; position: absolute; left: 50%; top: 10%; margin-left: -400px; border: solid 1px black; background: #fff; overflow: auto; }
-
-#modal-header { background-color: black; height: 30px; position: fixed; width: 800px; }
-#modal-header .modal-title { float: left; font-size: 0.8em; color: #d9b336; padding-left: 7px 0 0 15px; }
-#modal-header > .btn-close { display: block; text-decoration: none; font-weight: bold; font-size: 1.2em; padding: 3px 10px 0 0; position: absolute; right: 0; top: 0; }
-
-#modal-body { padding: 8px 15px 15px; width: 99%; max-height: 80%; background: white; overflow: auto; margin-top: 40px; }
 
 .media { margin: 10px; }
 .media .img { float: left; margin-right: 10px; }

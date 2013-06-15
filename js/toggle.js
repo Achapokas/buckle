@@ -1,4 +1,4 @@
-(function($, global){
+app.toggle = (function($, global){
 
   var toggleBtns = global.find('[data-action="toggle"]');
   if(!toggleBtns.length) return;
@@ -30,11 +30,11 @@
     sectionGroup.hide();
     section.show();
 
-    $.event.trigger('toggle:' + group, [toggleTarget]);
+    app.actions.trigger('toggle:' + group, [toggleTarget]);
   }
 
   //return
-  return;
+  return {};
 
 })(jQuery, jQuery(document));
 

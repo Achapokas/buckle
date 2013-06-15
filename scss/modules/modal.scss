@@ -1,10 +1,76 @@
-#modal {
+// ============================================
+// Modal
+// ============================================
+
+//variables
+$modalOverlayColor: rgba(0,0,0,0.8);
+$modalBodyColor: white;
+$modalHeaderColor: $appPrimary;
+$modalTitleColor: $modalBodyColor;
+$modalCloseBtnColor: $modalBodyColor;
+$modalBorderColor: $modalHeaderColor;
+
+$size: 400px;
+
+.modal {
   position: fixed;
   left: 0; top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: $modalOverlayColor;
   z-index: 500;
+
+  .wrapper {
+    //height: $size;
+    width: $size*2;
+    max-height: 80%;
+    // padding-top: 40px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -1 * ($size);
+    border: solid 1px $modalBorderColor;
+    background: $modalBodyColor;
+    overflow: auto;
+
+  }
+
+  .header{
+    background-color: $modalHeaderColor;
+    height: 30px;
+    position: fixed;
+    width: $size*2 - 2px;
+
+    .title{
+      float: left;
+      font-size: 0.8em;
+      color: $modalTitleColor;
+      padding-left: 7px 0 0 15px;
+    }
+
+    > .btn-close {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 3px 10px 0 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: $modalCloseBtnColor;
+    }
+  }
+
+  .body {
+    padding: 8px 15px 15px;
+    //height: $size - 40px;
+    //width: $size*2;
+    width: 99%;
+    max-height: 80%;
+    background: $modalBodyColor;
+    overflow: auto;
+    margin-top: 40px;
+  }
 }
 
 .loader {
@@ -20,57 +86,4 @@
   padding: 5px;
   background: black url(../imgs/ajax-loader.gif) no-repeat 5px 5px;
   @include addPrefix(border-radius, $btnRadius);
-}
-
-$size: 400px;
-
-#modal-content {
-  //height: $size;
-  width: $size*2;
-  max-height: 80%;
-  // padding-top: 40px;
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  margin-left: -1 * ($size);
-  border: solid 1px $darkBackground;
-  background: #fff;
-  overflow: auto;
-
-}
-
-#modal-header{
-  background-color: black;
-  height: 30px;
-  position: fixed;
-  width: $size*2;
-
-  .modal-title{
-    float: left;
-    font-size: 0.8em;
-    color: #d9b336;
-    padding-left: 7px 0 0 15px;
-  }
-
-  > .btn-close {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 3px 10px 0 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-}
-
-#modal-body {
-  padding: 8px 15px 15px;
-  //height: $size - 40px;
-  //width: $size*2;
-  width: 99%;
-  max-height: 80%;
-  background: white;
-  overflow: auto;
-  margin-top: 40px;
 }

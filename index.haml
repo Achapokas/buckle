@@ -222,13 +222,19 @@
                 %a.close{"data-dismiss" => "alert", :href => "#"} &times;
           %section.example.hidden{:data => {:toggle => "modals", :group => "modules"}}
             %h3 Modal
-            %a{"data-action" => "modal", :href => "#"} Open Modal
-            #modal.hidden
-              #modal-content.hidden
-                #modal-header.clearfix
-                  %span.modal-title
+            %p You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.
+            %a.btn{"data-action" => "modal", :href => "#some_content"} Load Local Content
+            %a.btn{:data => {:action => "modal", :url => "ajax.html"}, :href => "#"} Load Remote Content
+            #some_content.hidden
+              %h2 This is modal content!
+              %p
+                Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
+            .modal.hidden
+              .wrapper.hidden
+                .header.clearfix
+                  %span.title
                   %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
-                %section#modal-body
+                %section.body
               .loader.hidden
 
     %footer.shim-large-top
