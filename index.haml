@@ -49,34 +49,29 @@
           .span3
           .span3
           .span9
-        
-        / Modal
-        %section.example-section
-          %h2 Modal
-          %a{"data-action" => "modal", :href => "#"} Open Modal
-          #modal.hidden
-            #modal-content.hidden
-              #modal-header.clearfix
-                %span.modal-title
-                %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
-              %section#modal-body
-            .loader.hidden
 
-        %section.example-section
-          %h2 Alerts
-          #alerts
-            .alert.alert-notice
-              Something happended successfully!
-              %a.close{"data-dismiss" => "alert", :href => "#"} &times;
-            .alert.alert-error
-              There was an error doing something!
-              %a.close{"data-dismiss" => "alert", :href => "#"} &times;
-        %section.example-section
-          %h2 Tables
+
+        %h2.shim Modules
+
+        .row
+          .span3
+            %ul.nav.nav-vertical.nav-box
+              %li
+                %a.active{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
+              %li
+                %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
+              %li
+                %a{:href => "#", :data => {:action => "toggle", :target => "buttons", :group => "modules"}} Buttons
+              %li
+                %a{:href => "#", :data => {:action => "toggle", :target => "alerts", :group => "modules"}} Alerts
+              %li
+                %a{:href => "#", :data => {:action => "toggle", :target => "modals", :group => "modules"}} Modals
+
+          .span9
+            %section.example{:data => {:toggle => "tables", :group => "modules"}}
+              %h3 Tables
           
-          .row
-            .span6  
-              %h3 Default Style &mdash; No classes
+              %h4 Default Style &mdash; No classes
               %table
                 %thead
                   %tr
@@ -97,8 +92,8 @@
                     %td Mno Pqr
                     %td Super Duper Uber
 
-            .span6
-              %h3 Basic Style &mdash; "table" class
+            
+              %h4 Basic Style &mdash; "table" class
               %table.table
                 %thead
                   %tr
@@ -119,8 +114,8 @@
                     %td Mno Pqr
                     %td Super Duper Uber
 
-            .span6
-              %h3 Basic-Small Style &mdash; "table table-small" class
+            
+              %h4 Basic-Small Style &mdash; "table table-small" class
               %table.table.table-small
                 %thead
                   %tr
@@ -141,8 +136,7 @@
                     %td Mno Pqr
                     %td Super Duper Uber
 
-            .span6
-              %h3 Striped &mdash; "table table-striped" class
+              %h4 Striped &mdash; "table table-striped" class
               %table.table.table-striped
                 %thead
                   %tr
@@ -162,42 +156,61 @@
                     %td 3
                     %td Mno Pqr
                     %td Super Duper Uber
-        %section.example-section
-          %h2 Forms
-          %form{:action => ""}
-            %label{:for => "example-1"} Input #1
-            %input#example-1{:type => "text"}
-            
-            %label{:for => "example-2"} Input #2
-            %input#example-2{:type => "text"}
-            
-            %label{:for => "example-3"} Input #3
-            %input#example-3{:type => "text"}
-            
-            .actions
-              %input.btn{:type => "submit", :value => "Submit"}
-              %input.btn.btn-link{:type => "button", :value => "Cancel"}/
+            %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
+              %h3 Forms
+              %form{:action => ""}
+                %label{:for => "example-1"} Input #1
+                %input#example-1{:type => "text"}
+                
+                %label{:for => "example-2"} Input #2
+                %input#example-2{:type => "text"}
+                
+                %label{:for => "example-3"} Input #3
+                %input#example-3{:type => "text"}
+                
+                .actions
+                  %input.btn{:type => "submit", :value => "Submit"}
+                  %input.btn.btn-link{:type => "button", :value => "Cancel"}
+            %section.example.hidden{:data => {:toggle => "buttons", :group => "modules"}}
+              %h3 Buttons
+              %p can be applied to input, button, or anchor tags
+              
+              %a.btn{:href => "#"} I'm a standard button
+              %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
+              %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
 
-        %section.example-section
-          %h2 Buttons
-          %p can be applied to input, button, or anchor tags
-          
-          %a.btn{:href => "#"} I'm a standard button
-          %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
-          %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
+              %h4 Modifiers
+              
+              .row
+                .span4
+                  %h4 Small Button
+                  %a.btn.btn-small{:href => "#"} Save all changes
+                .span5  
+                  %h4 Large Button
+                  %a.btn.btn-large{:href => "#"} Sign Up Today!
+                .span9
+                  %h4 block-level
+                  %a.btn.btn-block{:href => "#"} I Accept the Terms &amp; Conditions. Lets Do This!
+            %section.example.hidden{:data => {:toggle => "alerts", :group => "modules"}}
+              %h3 Alerts
+              #alerts
+                .alert.alert-notice
+                  Something happended successfully!
+                  %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                .alert.alert-error
+                  There was an error doing something!
+                  %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+            %section.example.hidden{:data => {:toggle => "modals", :group => "modules"}}
+              %h3 Modal
+              %a{"data-action" => "modal", :href => "#"} Open Modal
+              #modal.hidden
+                #modal-content.hidden
+                  #modal-header.clearfix
+                    %span.modal-title
+                    %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
+                  %section#modal-body
+                .loader.hidden
 
-          %h3 Modifiers
-          
-          .row
-            .span3
-              %h4 Small Button
-              %a.btn.btn-small{:href => "#"} Save all changes
-            .span3  
-              %h4 Large Button
-              %a.btn.btn-large{:href => "#"} Sign Up Today!
-            .span6
-              %h4 block-level
-              %a.btn.btn-block{:href => "#"} I Accept the Terms &amp; Conditions. Lets Do This!
             
       / end .content
       %footer.shim-large-top
@@ -214,3 +227,4 @@
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"}
     :javascript
       window.jQuery || document.write('<\/script>')
+    %script{:src => "js/core.js"}

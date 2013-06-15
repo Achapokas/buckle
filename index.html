@@ -61,39 +61,31 @@
           <div class='span3'></div>
           <div class='span9'></div>
         </div>
-        <!-- Modal -->
-        <section class='example-section'>
-          <h2>Modal</h2>
-          <a data-action='modal' href='#'>Open Modal</a>
-          <div class='hidden' id='modal'>
-            <div class='hidden' id='modal-content'>
-              <div class='clearfix' id='modal-header'>
-                <span class='modal-title'></span>
-                <a class='btn-close' data-action='dismiss' href='#'>&times;</a>
-              </div>
-              <section id='modal-body'></section>
-            </div>
-            <div class='loader hidden'></div>
+        <h2 class='shim'>Modules</h2>
+        <div class='row'>
+          <div class='span3'>
+            <ul class='nav nav-vertical nav-box'>
+              <li>
+                <a class='active' data-action='toggle' data-group='modules' data-target='tables' href='#'>Tables</a>
+              </li>
+              <li>
+                <a data-action='toggle' data-group='modules' data-target='forms' href='#'>Forms</a>
+              </li>
+              <li>
+                <a data-action='toggle' data-group='modules' data-target='buttons' href='#'>Buttons</a>
+              </li>
+              <li>
+                <a data-action='toggle' data-group='modules' data-target='alerts' href='#'>Alerts</a>
+              </li>
+              <li>
+                <a data-action='toggle' data-group='modules' data-target='modals' href='#'>Modals</a>
+              </li>
+            </ul>
           </div>
-        </section>
-        <section class='example-section'>
-          <h2>Alerts</h2>
-          <div id='alerts'>
-            <div class='alert alert-notice'>
-              Something happended successfully!
-              <a class='close' data-dismiss='alert' href='#'>&times;</a>
-            </div>
-            <div class='alert alert-error'>
-              There was an error doing something!
-              <a class='close' data-dismiss='alert' href='#'>&times;</a>
-            </div>
-          </div>
-        </section>
-        <section class='example-section'>
-          <h2>Tables</h2>
-          <div class='row'>
-            <div class='span6'>
-              <h3>Default Style &mdash; No classes</h3>
+          <div class='span9'>
+            <section class='example' data-group='modules' data-toggle='tables'>
+              <h3>Tables</h3>
+              <h4>Default Style &mdash; No classes</h4>
               <table>
                 <thead>
                   <tr>
@@ -120,9 +112,7 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class='span6'>
-              <h3>Basic Style &mdash; "table" class</h3>
+              <h4>Basic Style &mdash; "table" class</h4>
               <table class='table'>
                 <thead>
                   <tr>
@@ -149,9 +139,7 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class='span6'>
-              <h3>Basic-Small Style &mdash; "table table-small" class</h3>
+              <h4>Basic-Small Style &mdash; "table table-small" class</h4>
               <table class='table table-small'>
                 <thead>
                   <tr>
@@ -178,9 +166,7 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class='span6'>
-              <h3>Striped &mdash; "table table-striped" class</h3>
+              <h4>Striped &mdash; "table table-striped" class</h4>
               <table class='table table-striped'>
                 <thead>
                   <tr>
@@ -207,46 +193,73 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </section>
+            <section class='example hidden' data-group='modules' data-toggle='forms'>
+              <h3>Forms</h3>
+              <form action=''>
+                <label for='example-1'>Input #1</label>
+                <input id='example-1' type='text'>
+                <label for='example-2'>Input #2</label>
+                <input id='example-2' type='text'>
+                <label for='example-3'>Input #3</label>
+                <input id='example-3' type='text'>
+                <div class='actions'>
+                  <input class='btn' type='submit' value='Submit'>
+                  <input class='btn btn-link' type='button' value='Cancel'>
+                </div>
+              </form>
+            </section>
+            <section class='example hidden' data-group='modules' data-toggle='buttons'>
+              <h3>Buttons</h3>
+              <p>can be applied to input, button, or anchor tags</p>
+              <a class='btn' href='#'>I'm a standard button</a>
+              <a class='btn btn-secondary' href='#'>I'm a secondary action button</a>
+              <a class='btn btn-link' href='#'>I'm a button styled like a link</a>
+              <h4>Modifiers</h4>
+              <div class='row'>
+                <div class='span4'>
+                  <h4>Small Button</h4>
+                  <a class='btn btn-small' href='#'>Save all changes</a>
+                </div>
+                <div class='span5'>
+                  <h4>Large Button</h4>
+                  <a class='btn btn-large' href='#'>Sign Up Today!</a>
+                </div>
+                <div class='span9'>
+                  <h4>block-level</h4>
+                  <a class='btn btn-block' href='#'>I Accept the Terms &amp; Conditions. Lets Do This!</a>
+                </div>
+              </div>
+            </section>
+            <section class='example hidden' data-group='modules' data-toggle='alerts'>
+              <h3>Alerts</h3>
+              <div id='alerts'>
+                <div class='alert alert-notice'>
+                  Something happended successfully!
+                  <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                </div>
+                <div class='alert alert-error'>
+                  There was an error doing something!
+                  <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                </div>
+              </div>
+            </section>
+            <section class='example hidden' data-group='modules' data-toggle='modals'>
+              <h3>Modal</h3>
+              <a data-action='modal' href='#'>Open Modal</a>
+              <div class='hidden' id='modal'>
+                <div class='hidden' id='modal-content'>
+                  <div class='clearfix' id='modal-header'>
+                    <span class='modal-title'></span>
+                    <a class='btn-close' data-action='dismiss' href='#'>&times;</a>
+                  </div>
+                  <section id='modal-body'></section>
+                </div>
+                <div class='loader hidden'></div>
+              </div>
+            </section>
           </div>
-        </section>
-        <section class='example-section'>
-          <h2>Forms</h2>
-          <form action=''>
-            <label for='example-1'>Input #1</label>
-            <input id='example-1' type='text'>
-            <label for='example-2'>Input #2</label>
-            <input id='example-2' type='text'>
-            <label for='example-3'>Input #3</label>
-            <input id='example-3' type='text'>
-            <div class='actions'>
-              <input class='btn' type='submit' value='Submit'>
-              <input class='btn btn-link' type='button' value='Cancel'>
-            </div>
-          </form>
-        </section>
-        <section class='example-section'>
-          <h2>Buttons</h2>
-          <p>can be applied to input, button, or anchor tags</p>
-          <a class='btn' href='#'>I'm a standard button</a>
-          <a class='btn btn-secondary' href='#'>I'm a secondary action button</a>
-          <a class='btn btn-link' href='#'>I'm a button styled like a link</a>
-          <h3>Modifiers</h3>
-          <div class='row'>
-            <div class='span3'>
-              <h4>Small Button</h4>
-              <a class='btn btn-small' href='#'>Save all changes</a>
-            </div>
-            <div class='span3'>
-              <h4>Large Button</h4>
-              <a class='btn btn-large' href='#'>Sign Up Today!</a>
-            </div>
-            <div class='span6'>
-              <h4>block-level</h4>
-              <a class='btn btn-block' href='#'>I Accept the Terms &amp; Conditions. Lets Do This!</a>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
       <!-- end .content -->
       <footer class='shim-large-top'>
@@ -271,5 +284,6 @@
     <script>
       window.jQuery || document.write('<\/script>')
     </script>
+    <script src='js/core.js'></script>
   </body>
 </body>
