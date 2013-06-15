@@ -1,11 +1,33 @@
 var app = {};
 
 
+//@codekit-append "lib/jquery.enhancement.js";
 //@codekit-append "actions.js";
 //@codekit-append "store.js";
 //@codekit-append "alerts.js";
 //@codekit-append "modals.js";
+//@codekit-append "toggle.js";
 //@codekit-append "togglebox.js";
+
+/* **********************************************
+     Begin jquery.enhancement.js
+********************************************** */
+
+(function($){
+
+  $.fn.show = function() {
+    this.removeClass('hidden');
+  }
+
+  $.fn.hide = function() {
+    this.addClass('hidden');
+  }
+
+  $.fn.toggle = function (){
+    this.hasClass('hidden') ? this.show() : this.hide();
+  }
+
+})(jQuery);
 
 /* **********************************************
      Begin actions.js
@@ -59,10 +81,6 @@ app.actions = (function ($, global) {
      Begin store.js
 ********************************************** */
 
-// ============================================
-// Store - localStorage
-// ============================================
-
 app.store = (function(m){
 
   var _this = {};
@@ -96,10 +114,6 @@ app.store = (function(m){
 /* **********************************************
      Begin alerts.js
 ********************************************** */
-
-// ============================================
-// Alerts
-// ============================================
 
 app.alerts = (function ($, global, alertSelector) {
  
@@ -153,10 +167,6 @@ app.alerts = (function ($, global, alertSelector) {
 /* **********************************************
      Begin modals.js
 ********************************************** */
-
-// ============================================
-// Modal
-// ============================================
 
 app.modal = (function ($, modal) {
  
@@ -227,12 +237,50 @@ app.modal = (function ($, modal) {
 })(jQuery, jQuery('#modal'));
 
 /* **********************************************
-     Begin togglebox.js
+     Begin toggle.js
 ********************************************** */
 
-// ============================================
-// Togglebox
-// ============================================
+(function($, global){
+
+  var toggleBtns = global.find('[data-action="toggle"]');
+  if(!toggleBtns.length) return;
+
+  var toggleSections;
+
+  global.on('click', '[data-action="toggle"]', toggle);
+
+  function toggle(e) {
+    e.preventDefault();
+
+    var btn, group, target, section,
+        btnGroup, sectionGroup;
+
+    btn           = $(e.target);
+    if(btn.hasClass('active')) return;
+
+    group         = btn.data('group');
+    toggleTarget  = btn.data('target');
+
+    btnGroup      = global.find('[data-action="toggle"][data-group="'+group+'"]');
+    sectionGroup  = global.find('[data-toggle][data-group="'+group+'"]');
+
+    section       = sectionGroup.filter('[data-toggle="'+ toggleTarget +'"]');
+
+    btnGroup.removeClass('active');
+    btn.addClass('active');
+
+    sectionGroup.hide();
+    section.show();
+  }
+
+  //return
+  return;
+
+})(jQuery, jQuery(document));
+
+/* **********************************************
+     Begin togglebox.js
+********************************************** */
 
 app.togglebox = (function ($, global) {
  

@@ -1,7 +1,3 @@
-// ============================================
-// Togglebox
-// ============================================
-
 app.togglebox = (function ($, global) {
  
   var container, buttons;
