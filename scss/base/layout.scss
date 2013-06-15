@@ -37,10 +37,6 @@ $shimLarge: 30px;
   display: block;
   margin-left: $gutter;
   min-height: 1px;
-
-  [class^="span"]:first-of-type {
-    margin-left: 0;
-  }
 }
 
 //generate layout classes
@@ -48,6 +44,8 @@ $shimLarge: 30px;
 
     .span#{$i}  { 
       width: ($columnWidth * $i) + ($gutter * ($i - 1));
+
+      .row { width: ($columnWidth * $i) + ($gutter * ($i - 1)) + $gutter; }
     }
     .offset#{$i} { margin-left: ($columnWidth * $i) + ($gutter * ($i + 1));}
 }
