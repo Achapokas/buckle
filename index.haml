@@ -15,13 +15,16 @@
       .container  
         %h1.pull-left
           %a{:href => "/"} Buckle
-        %nav.pull-right.small
-          %ul.nav.nav-main
+        %nav.pull-right
+          %ul.nav.nav-feature
             %li
-              %a{:href => "#"} Modules
+              %a{:href => "#intro"} What is it?
             %li
-              %a{:href => "#"} Containers
-    %section.hero
+              %a{:href => "#grid"} Grid
+            %li
+              %a{:href => "#components"} Components
+
+    %section#intro.hero
       .container
         .row
           %article.span8
@@ -31,223 +34,256 @@
             %p
               This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap &ndash; as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
     %section.container.content
-      %h2 Grid
-      %p Flexible. Nestable. Layout your pages in no time.
-      .row.row-test
-        .span12
-        .span6
-        .span6
-          .row
-            .span3
-            .span3
-        .span4
-        .span4
-        .span4
-        .span3
-        .span3
-        .span3
-        .span3
-        .span3
-        .span6
-        .span3
-          .row
-            .span2
-            .span1
-        .span3
-        .span9
-          .row
-            .span6
-            .span3
-        .span2
-        .span8
-        .span2
-        .span6
-        .span2
-        .span2
-        .span2
-        .span8
-        .span1
-        .span1
-        .span2
 
-
-      %h2.shim Modules
-
-      .row
-        .span3
-          %ul.nav.nav-vertical.nav-box
-            %li
-              %a.active{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
-            %li
-              %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
-            %li
-              %a{:href => "#", :data => {:action => "toggle", :target => "buttons", :group => "modules"}} Buttons
-            %li
-              %a{:href => "#", :data => {:action => "toggle", :target => "alerts", :group => "modules"}} Alerts
-            %li
-              %a{:href => "#", :data => {:action => "toggle", :target => "modals", :group => "modules"}} Modals
-
-        .span9
-          %section.example{:data => {:toggle => "tables", :group => "modules"}}
-            %h3 Tables
-        
-            %h4 Default Style &mdash; No classes
-            %table
-              %thead
-                %tr
-                  %th Something
-                  %th Else
-                  %th Here
-              %tbody
-                %tr
-                  %td 1
-                  %td Abc Def
-                  %td Alpha Beta
-                %tr
-                  %td 2
-                  %td Ghi Jkl
-                  %td Gamma Delta
-                %tr
-                  %td 3
-                  %td Mno Pqr
-                  %td Super Duper Uber
-
-          
-            %h4 Basic Style &mdash; "table" class
-            %table.table
-              %thead
-                %tr
-                  %th Something
-                  %th Else
-                  %th Here
-              %tbody
-                %tr
-                  %td 1
-                  %td Abc Def
-                  %td Alpha Beta
-                %tr
-                  %td 2
-                  %td Ghi Jkl
-                  %td Gamma Delta
-                %tr
-                  %td 3
-                  %td Mno Pqr
-                  %td Super Duper Uber
-
-          
-            %h4 Basic-Small Style &mdash; "table table-small" class
-            %table.table.table-small
-              %thead
-                %tr
-                  %th Something
-                  %th Else
-                  %th Here
-              %tbody
-                %tr
-                  %td 1
-                  %td Abc Def
-                  %td Alpha Beta
-                %tr
-                  %td 2
-                  %td Ghi Jkl
-                  %td Gamma Delta
-                %tr
-                  %td 3
-                  %td Mno Pqr
-                  %td Super Duper Uber
-
-            %h4 Striped &mdash; "table table-striped" class
-            %table.table.table-striped
-              %thead
-                %tr
-                  %th Something
-                  %th Else
-                  %th Here
-              %tbody
-                %tr
-                  %td 1
-                  %td Abc Def
-                  %td Alpha Beta
-                %tr
-                  %td 2
-                  %td Ghi Jkl
-                  %td Gamma Delta
-                %tr
-                  %td 3
-                  %td Mno Pqr
-                  %td Super Duper Uber
-          %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
-            %h3 Forms
-            %form{:action => ""}
-              %label{:for => "example-1"} Input #1
-              %input#example-1{:type => "text"}
-              
-              %label{:for => "example-2"} Input #2
-              %input#example-2{:type => "text"}
-              
-              %label{:for => "example-3"} Input #3
-              %input#example-3{:type => "text"}
-              
-              .actions
-                %input.btn{:type => "submit", :value => "Submit"}
-                %input.btn.btn-link{:type => "button", :value => "Cancel"}
-          %section.example.hidden{:data => {:toggle => "buttons", :group => "modules"}}
-            %h3 Buttons
-            %p can be applied to input, button, or anchor tags
-            
-            %a.btn{:href => "#"} I'm a standard button
-            %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
-            %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
-
-            %h4 Modifiers
-            
+      %article#grid
+        %h2 Grid
+        %p Flexible. Nestable. Layout your pages in no time.
+        .row.row-test
+          .span12
+          .span6
+          .span6
             .row
-              .span4
-                %h4 Small Button
-                %a.btn.btn-small{:href => "#"} Save all changes
-              .span5  
-                %h4 Large Button
-                %a.btn.btn-large{:href => "#"} Sign Up Today!
-              .span9
-                %h4 block-level
-                %a.btn.btn-block{:href => "#"} I Accept the Terms &amp; Conditions. Lets Do This!
-          %section.example.hidden{:data => {:toggle => "alerts", :group => "modules"}}
-            %h3 Alerts
-            #alerts
-              .alert.alert-notice
-                Something happended successfully!
-                %a.close{"data-dismiss" => "alert", :href => "#"} &times;
-              .alert.alert-error
-                There was an error doing something!
-                %a.close{"data-dismiss" => "alert", :href => "#"} &times;
-          %section.example.hidden{:data => {:toggle => "modals", :group => "modules"}}
-            %h3 Modal
-            %p You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.
-            %a.btn{"data-action" => "modal", :href => "#some_content"} Load Local Content
-            %a.btn{:data => {:action => "modal", :url => "ajax.html"}, :href => "#"} Load Remote Content
-            #some_content.hidden
-              %h2 This is modal content!
-              %p
-                Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
-            .modal.hidden
-              .wrapper.hidden
-                .header.clearfix
-                  %span.title
-                  %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
-                %section.body
-              .loader.hidden
+              .span3
+              .span3
+          .span4
+          .span4
+          .span4
+          .span3
+          .span3
+          .span3
+          .span3
+          .span3
+          .span6
+          .span3
+            .row
+              .span2
+              .span1
+          .span3
+          .span9
+            .row
+              .span6
+              .span3
+          .span2
+          .span8
+          .span2
+          .span6
+          .span2
+          .span2
+          .span2
+          .span8
+          .span1
+          .span1
+          .span2
+
+
+
+      %article#components
+        %ul.nav.nav-box.shim-large
+          %li
+            %a.active{:href => "#modules", :data => {:action => "toggle", :target => "modules", :group => "components"}} Modules
+          %li
+            %a{:href => "#containers", :data => {:action => "toggle", :target => "containers", :group => "components"}} Containers
+        
+        %section{:data => {:toggle => "modules", :group => "components"}}
+          %h2.shim Modules
+          .row
+            .span3
+              %ul.nav.nav-vertical.nav-box
+                %li
+                  %a.active{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "buttons", :group => "modules"}} Buttons
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "alerts", :group => "modules"}} Alerts
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "modals", :group => "modules"}} Modals
+
+            .span9
+              %section.example{:data => {:toggle => "tables", :group => "modules"}}
+                %h3 Tables
+            
+                %h4 Default Style &mdash; No classes
+                %table
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+              
+                %h4 Basic Style &mdash; "table" class
+                %table.table
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+              
+                %h4 Basic-Small Style &mdash; "table table-small" class
+                %table.table.table-small
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+                %h4 Striped &mdash; "table table-striped" class
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+              %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
+                %h3 Forms
+                %form{:action => ""}
+                  %label{:for => "example-1"} Input #1
+                  %input#example-1{:type => "text"}
+                  
+                  %label{:for => "example-2"} Input #2
+                  %input#example-2{:type => "text"}
+                  
+                  %label{:for => "example-3"} Input #3
+                  %input#example-3{:type => "text"}
+                  
+                  .actions
+                    %input.btn{:type => "submit", :value => "Submit"}
+                    %input.btn.btn-link{:type => "button", :value => "Cancel"}
+              %section.example.hidden{:data => {:toggle => "buttons", :group => "modules"}}
+                %h3 Buttons
+                %p can be applied to input, button, or anchor tags
+                
+                %a.btn{:href => "#"} I'm a standard button
+                %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
+                %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
+
+                %h4 Modifiers
+                
+                .row
+                  .span4
+                    %h4 Small Button
+                    %a.btn.btn-small{:href => "#"} Save all changes
+                  .span5  
+                    %h4 Large Button
+                    %a.btn.btn-large{:href => "#"} Sign Up Today!
+                  .span9
+                    %h4 block-level
+                    %a.btn.btn-block{:href => "#"} I Accept the Terms &amp; Conditions. Lets Do This!
+              %section.example.hidden{:data => {:toggle => "alerts", :group => "modules"}}
+                %h3 Alerts
+                #alerts
+                  .alert.alert-notice
+                    Something happended successfully!
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-error
+                    There was an error doing something!
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+              %section.example.hidden{:data => {:toggle => "modals", :group => "modules"}}
+                %h3 Modal
+                %p You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.
+                %a.btn{"data-action" => "modal", :href => "#some_content"} Load Local Content
+                %a.btn{:data => {:action => "modal", :url => "ajax.html"}, :href => "#"} Load Remote Content
+                #some_content.hidden
+                  %h2 This is modal content!
+                  %p
+                    Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
+                .modal.hidden
+                  .wrapper.hidden
+                    .header.clearfix
+                      %span.title
+                      %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
+                    %section.body
+                  .loader.hidden
+
+        %section.hidden{:data => {:toggle => "containers", :group => "components"}}
+          %h2.shim Containers
+          .row
+            .span3
+              %ul.nav.nav-vertical.nav-box
+                %li
+                  %a.active{:href => "#", :data => {:action => "toggle", :target => "highlevel", :group => "containers"}} High Level
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "hero", :group => "containers"}} Hero
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "navbar", :group => "containers"}} NavBar
+            .span9
+              %section.example{:data => {:toggle => "highlevel", :group => "containers"}}
+                %h3 High Level Containers
+                %p Doobie Do
+              %section.example.hidden{:data => {:toggle => "hero", :group => "containers"}}
+                %h3 Hero Container
+                %p SUPERMAN!
+              %section.example.hidden{:data => {:toggle => "navbar", :group => "containers"}}
+                %h3 NavBar Container
+                %p Bars for all the navs
+
 
     %footer.shim-large-top
       .container
         %nav.pull-right
-          %ul.nav.nav-footer
+          %ul.nav.nav-bordered
             %li
-              %a{:href => "#"} Base
+              %a{:href => "#intro"} What is it?
             %li
-              %a{:href => "#"} Modules
+              %a{:href => "#grid"} Grid
             %li
-              %a{:href => "#"} Pages
-        %h5.pull-left &copy; Copyright 2012 Matt Duffy. All Rights Reserved.
+              %a{:href => "#components"} Components
+        %h5.pull-left &copy; Copyright 2013 Matt Duffy. All Rights Reserved.
 
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"}
     :javascript
