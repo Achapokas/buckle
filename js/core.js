@@ -210,12 +210,14 @@ app.modal = (function ($, global) {
     if(content) { body.html(content) }
     modal.add(container)
       .removeClass("hidden");
+    app.actions.trigger('modal:open');
   }
 
   function hide(persistBody) {
     modal.add(container)
       .addClass("hidden");
     if(!persistBody) { body.empty(); }
+    app.actions.trigger('modal:close');
   }
 
 
@@ -257,8 +259,7 @@ app.modal = (function ($, global) {
     function loadContent(event, content, action, actionContent) {
 
       if(!modal.is(":hidden")) {
-        body.html(content);
-        container.removeClass("hidden");
+        show(content);
         hideLoader();
       }
       
