@@ -1,8 +1,12 @@
 
+$tableHeadColor: $appSecondary;
+
 $tableBtnRadius: $appRadius;
 $tableBorderColor: $appBorderColor;
 $tableStripeColor: $appShadeColor;
 $tableStripeHeadColor: $appPrimary;
+$tableHoverColor: $appSecondaryLight;
+$tableHoverTextColor: $bodyColor;
 
 table {
   width: 100%;
@@ -24,6 +28,7 @@ td, th {
 
   thead {
     @include addPrefix(border-radius, $tableBtnRadius $tableBtnRadius 0 0);
+    color: $tableHeadColor;
   }
 
   tbody, 
@@ -49,13 +54,6 @@ td, th {
 
 }
 
-.table-small {
-  font-size: .8em;
-  td, th {
-    padding: 3px 5px;
-  }
-}
-
 .table-striped {
 
   thead {
@@ -70,5 +68,21 @@ td, th {
       background: $tableStripeColor;
     }
 
+  }
+}
+
+.table-small {
+  font-size: .8em;
+  td, th {
+    padding: 3px 5px;
+  }
+}
+
+.table-hover {
+  tbody {
+    tr:hover {
+      background: $tableHoverColor;
+      color: $tableHoverTextColor;
+    }
   }
 }

@@ -296,7 +296,6 @@
                             %a{:href => "#"} SUVs
                       %li
                         %a{:href => "#"} About
-
               %section.example.hidden{:data => {:toggle => "tables", :group => "modules"}}
                 %h3 Tables
             
@@ -343,7 +342,27 @@
                       %td Mno Pqr
                       %td Super Duper Uber
 
-              
+                %h4 Striped &mdash; "table table-striped" class
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
                 %h4 Basic-Small Style &mdash; "table table-small" class
                 %table.table.table-small
                   %thead
@@ -365,8 +384,8 @@
                       %td Mno Pqr
                       %td Super Duper Uber
 
-                %h4 Striped &mdash; "table table-striped" class
-                %table.table.table-striped
+                %h4 Basic Table with Hover &mdash; "table table-hover" class
+                %table.table.table-hover
                   %thead
                     %tr
                       %th Something
@@ -385,6 +404,7 @@
                       %td 3
                       %td Mno Pqr
                       %td Super Duper Uber
+
               %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
                 %h3 Forms
                 %form{:action => ""}
