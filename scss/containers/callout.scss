@@ -1,0 +1,30 @@
+// ============================================
+// Callout Containers
+// ============================================
+
+//variables
+$calloutBorderColor: $appBorderColor;
+$calloutShadeColor : $appShadeColor;
+$calloutHighlightColor: $bodyColor;
+$calloutHeadingColor: $appPrimary;
+$calloutTextColor: $textColor;
+$calloutRadius: $appRadius;
+
+
+//container
+
+.callout {
+  @include addPrefix(border-radius, $calloutRadius);
+  @include gradient($calloutShadeColor, $calloutHighlightColor);
+  padding: 10px;
+  border: 1px solid $calloutBorderColor;
+
+  h1,h2,h3 {
+    color: $calloutHeadingColor;
+    font-weight: 400;
+  }
+
+  .body {
+    color: $calloutTextColor;
+  }
+}

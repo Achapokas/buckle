@@ -18,12 +18,14 @@ $navSidePadding: 10px;
 
   li {
     @include inlineblock();
+    margin-left: -4px;
 
     &:first-child {
       padding-left: 0;
+      margin-left: 0;
     }
 
-    margin-left: -4px;
+    
   }
 
   a {
@@ -37,6 +39,7 @@ $navSidePadding: 10px;
   li {
     display: block;
     padding: 0;
+    margin-left: 0;
 
     &:first-child {
       padding: 0;
