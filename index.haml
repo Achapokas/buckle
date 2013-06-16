@@ -12,7 +12,7 @@
     %script{:src => "js/lib/modernizr.js"}
   %body
     %header
-      .container  
+      .container.clearfix
         %h1.pull-left
           %a{:href => "/"} Buckle
         %nav.pull-right
@@ -24,7 +24,7 @@
             %li
               %a{:href => "#components"} Components
 
-    %section#intro.hero
+    %section#intro.hero.medium
       .container
         .row
           %article.span8
@@ -387,16 +387,66 @@
                 %li
                   %a.active{:href => "#", :data => {:action => "toggle", :target => "highlevel", :group => "containers"}} High Level
                 %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "widget", :group => "containers"}} Widget
+                %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "hero", :group => "containers"}} Hero
                 %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "navbar", :group => "containers"}} NavBar
             .span9
               %section.example{:data => {:toggle => "highlevel", :group => "containers"}}
                 %h3 High Level Containers
-                %p Doobie Do
+                %p The high level containers file holds some of your most outer containers used as a standard for marking-up your Buckle friendly HTML pages. Header, Footer, and your Content area will sometimes call for some unique padding, colors, and overall style properties. This is where those should go. By default, there is little to nothing in this file; it merely serves as a reminder to where that stuff belongs when you go to add it. You are welcome :P
+              %section.example.hidden{:data => {:toggle => "widget", :group => "containers"}}
+                %h3 Widget Containers
+               
+                .row
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+
+                  .span9
+                    %h4.shim Widget Group
+
+                    .row
+                      .span3
+                        .widgetgroup
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here.
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here. 
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here.
               %section.example.hidden{:data => {:toggle => "hero", :group => "containers"}}
                 %h3 Hero Container
-                %p SUPERMAN!
+                
+                .hero.huge.buffer-large
+                  %h1 I Am Superman
+                  %p A hero container is used as a attention grabbing, bold callout.
               %section.example.hidden{:data => {:toggle => "navbar", :group => "containers"}}
                 %h3 NavBar Container
                 %p Bars for all the navs

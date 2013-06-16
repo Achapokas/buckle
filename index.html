@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container clearfix">
         <h1 class="pull-left">
           <a href="/">Buckle</a>
         </h1>
@@ -32,7 +32,7 @@
         </nav>
       </div>
     </header>
-    <section class="hero" id="intro">
+    <section class="hero medium" id="intro">
       <div class="container">
         <div class="row">
           <article class="span8">
@@ -500,6 +500,9 @@
                   <a class="active" data-action="toggle" data-group="containers" data-target="highlevel" href="#">High Level</a>
                 </li>
                 <li>
+                  <a data-action="toggle" data-group="containers" data-target="widget" href="#">Widget</a>
+                </li>
+                <li>
                   <a data-action="toggle" data-group="containers" data-target="hero" href="#">Hero</a>
                 </li>
                 <li>
@@ -510,11 +513,82 @@
             <div class="span9">
               <section class="example" data-group="containers" data-toggle="highlevel">
                 <h3>High Level Containers</h3>
-                <p>Doobie Do</p>
+                <p>The high level containers file holds some of your most outer containers used as a standard for marking-up your Buckle friendly HTML pages. Header, Footer, and your Content area will sometimes call for some unique padding, colors, and overall style properties. This is where those should go. By default, there is little to nothing in this file; it merely serves as a reminder to where that stuff belongs when you go to add it. You are welcome :P</p>
+              </section>
+              <section class="example hidden" data-group="containers" data-toggle="widget">
+                <h3>Widget Containers</h3>
+                <div class="row">
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span9">
+                    <h4 class="shim">Widget Group</h4>
+                    <div class="row">
+                      <div class="span3">
+                        <div class="widgetgroup">
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
               <section class="example hidden" data-group="containers" data-toggle="hero">
                 <h3>Hero Container</h3>
-                <p>SUPERMAN!</p>
+                <div class="hero huge buffer-large">
+                  <h1>I Am Superman</h1>
+                  <p>A hero container is used as a attention grabbing, bold callout.</p>
+                </div>
               </section>
               <section class="example hidden" data-group="containers" data-toggle="navbar">
                 <h3>NavBar Container</h3>
