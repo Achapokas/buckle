@@ -301,14 +301,39 @@ ul ul, ul ol, ol ul, ol ol { padding-left: 15px; }
 form .actions { padding: 15px 0; }
 
 label { display: block; margin: 10px 0 5px; color: #7acf72; }
+label input[type="checkbox"], label input[type="radio"] { position: relative; top: -1px; margin-right: 5px; }
+
+.label-checkbox { color: #666666; }
 
 input, textarea, select { color: #666666; padding: 3px 5px; border: 1px solid #dddddd; background: #fbfbfb; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+input:focus, textarea:focus, select:focus { outline: none; border-color: #7acf72; }
+input[class*="span"], textarea[class*="span"], select[class*="span"] { float: none; margin-left: 0; }
+
+textarea { height: 100px; resize: none; }
 
 input[type="file"] { border: 0; background: transparent; }
 
-input[class*="span"], select[class*="span"], textarea[class*="span"] { float: none; margin-left: 0; }
-
 select[multiple] { overflow: auto; }
+
+.checkboxgroup label { display: inline-block; zoom: 1; *display: inline; margin-left: 15px; }
+.checkboxgroup label:first-child { margin-left: 0; }
+
+.fieldgroup input, .fieldgroup select, .fieldgroup label { display: inline-block; zoom: 1; *display: inline; margin-left: 10px; }
+.fieldgroup input:first-child, .fieldgroup select:first-child, .fieldgroup label:first-child { margin-left: 0; }
+.fieldgroup label input, .fieldgroup label select { display: block; }
+
+.input-prepend, .input-append { display: block; }
+.input-prepend .append, .input-prepend .prepend, .input-prepend input, .input-append .append, .input-append .prepend, .input-append input { display: inline-block; zoom: 1; *display: inline; }
+.input-prepend .append, .input-prepend .prepend, .input-append .append, .input-append .prepend { background: #7acf72; color: #fbfbfb; padding: 3px 5px; border: 1px solid #7acf72; }
+
+.input-prepend .prepend { -webkit-border-radius: 3px 0 0 3px; -moz-border-radius: 3px 0 0 3px; -ms-border-radius: 3px 0 0 3px; -o-border-radius: 3px 0 0 3px; border-radius: 3px 0 0 3px; }
+.input-prepend input { -webkit-border-radius: 0 3px 3px 0; -moz-border-radius: 0 3px 3px 0; -ms-border-radius: 0 3px 3px 0; -o-border-radius: 0 3px 3px 0; border-radius: 0 3px 3px 0; margin-left: -4px; }
+
+.input-append .append { -webkit-border-radius: 0 3px 3px 0; -moz-border-radius: 0 3px 3px 0; -ms-border-radius: 0 3px 3px 0; -o-border-radius: 0 3px 3px 0; border-radius: 0 3px 3px 0; margin-left: -4px; }
+.input-append input { -webkit-border-radius: 3px 0 0 3px; -moz-border-radius: 3px 0 0 3px; -ms-border-radius: 3px 0 0 3px; -o-border-radius: 3px 0 0 3px; border-radius: 3px 0 0 3px; }
+
+.form-inline label, .form-inline input, .form-inline select { display: inline-block; zoom: 1; *display: inline; vertical-align: middle; }
+.form-inline label { vertical-align: baseline; margin-right: 5px; }
 
 .form-full input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]), .form-full textarea { width: 100%; }
 .form-full select { width: 25%; }

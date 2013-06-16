@@ -545,16 +545,140 @@
               <section class="example hidden" data-group="modules" data-toggle="forms">
                 <h3>Forms</h3>
                 <form action="">
-                  <label for="example-1">Input #1</label>
-                  <input id="example-1" type="text">
-                  <label for="example-2">Input #2</label>
-                  <input id="example-2" type="text">
-                  <label for="example-3">Input #3</label>
-                  <input id="example-3" type="text">
+                  <div class="row">
+                    <div class="span3">
+                      <label for="example-1">Input #1</label>
+                      <input id="example-1" type="text">
+                      <label for="example-2">Input #2</label>
+                      <textarea id="example-2" name="exaplme-2"></textarea>
+                    </div>
+                    <div class="span3">
+                      <label>What are you interested in?:</label>
+                      <label class="label-checkbox" for="checkbox-1">
+                        <input id="checkbox-1" name="checkbox-1" type="checkbox" value="1">
+                        Checkbox 1
+                      </label>
+                      <label class="label-checkbox" for="checkbox-2">
+                        <input id="checkbox-2" name="checkbox-2" type="checkbox" value="2">
+                        Checkbox 2
+                      </label>
+                      <label>Pick One:</label>
+                      <label class="label-checkbox" for="radio-1">
+                        <input id="radio-1" name="radios" type="radio" value="1">
+                        Radio 1
+                      </label>
+                      <label class="label-checkbox" for="radio-2">
+                        <input id="radio-2" name="radios" type="radio" value="2">
+                        Radio 2
+                      </label>
+                    </div>
+                    <div class="span3">
+                      <label>Size Fields with span* classes</label>
+                      <input class="span1" id="example-1" type="text">
+                      <input class="span2" id="example-1" type="text">
+                      <input class="span3" id="example-1" type="text">
+                    </div>
+                    <div class="span6 clear">
+                      <h4>Aligned Checkboxes/Radios</h4>
+                      <div class="checkboxgroup">
+                        <label class="label-checkbox" for="checkbox-1">
+                          <input id="checkbox-1" name="checkbox-1" type="checkbox" value="1">
+                          Checkbox 1
+                        </label>
+                        <label class="label-checkbox" for="checkbox-2">
+                          <input id="checkbox-2" name="checkbox-2" type="checkbox" value="2">
+                          Checkbox 2
+                        </label>
+                        <label class="label-checkbox" for="checkbox-3">
+                          <input id="checkbox-3" name="checkbox-3" type="checkbox" value="3">
+                          Checkbox 3
+                        </label>
+                      </div>
+                      <div class="checkboxgroup">
+                        <label class="label-checkbox" for="radio-1">
+                          <input id="radio-1" name="radio" type="radio" value="1">
+                          Radio Button 1
+                        </label>
+                        <label class="label-checkbox" for="radio-2">
+                          <input id="radio-2" name="radio" type="radio" value="2">
+                          Radio Button 2
+                        </label>
+                        <label class="label-checkbox" for="radio-3">
+                          <input id="radio-3" name="radio" type="radio" value="3">
+                          Radio Button 3
+                        </label>
+                      </div>
+                    </div>
+                    <div class="span3">
+                      <h4>Prepend Inputs</h4>
+                      <div class="input-prepend">
+                        <span class="prepend">@</span>
+                        <input id="example-1" type="text">
+                      </div>
+                      <h4>Append Inputs</h4>
+                      <div class="input-append">
+                        <input id="example-1" type="text">
+                        <span class="append">.00</span>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <h4>Field Group</h4>
+                      <div class="fieldgroup">
+                        <input class="span2">
+                        <select class="span3">
+                          <option>Boom</option>
+                          <option>Bang</option>
+                        </select>
+                        <input class="span1">
+                      </div>
+                      <div class="fieldgroup">
+                        <label>
+                          City
+                          <input class="span2">
+                        </label>
+                        <label>
+                          State
+                          <input class="span3">
+                        </label>
+                        <label>
+                          Zip
+                          <input class="span1">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="span9">
+                      <h4>Togglebox Control</h4>
+                      <div class="togglebox">
+                        <select class="box" multiple="multiple">
+                          <option>Uno</option>
+                          <option>Dose</option>
+                          <option>Three</option>
+                        </select>
+                        <div class="toggleactions">
+                          <a class="btn" data-action="add" href="#">Add</a>
+                          <a class="btn" data-action="remove" href="#">Remove</a>
+                        </div>
+                        <select class="box" multiple="multiple"></select>
+                      </div>
+                      <div class="togglefallback">
+                        <select class="box" multiple="multiple">
+                          <option>Uno</option>
+                          <option>Dose</option>
+                          <option>Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   <div class="actions">
                     <input class="btn" type="submit" value="Submit">
                     <input class="btn btn-link" type="button" value="Cancel">
                   </div>
+                </form>
+                <h4>Inline Form</h4>
+                <form action="/" class="form-inline" method="get">
+                  <label>Search</label>
+                  <input class="span4" placeholder="who am I?" type="text">
+                  <input class="btn btn-small" type="submit" value="Search">
                 </form>
               </section>
               <section class="example hidden" data-group="modules" data-toggle="buttons">

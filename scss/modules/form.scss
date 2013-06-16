@@ -6,8 +6,10 @@
 $formLabelColor: $appPrimary;
 $formInputColor: $textColor;
 $formBorderColor: $appBorderColor;
+$formFocusBorderColor: $appPrimary;
 $formInputBackground: lighten($appShadeColor, 5);
 $formRadius: $appRadius;
+$formInputPadding: 3px 5px;
 
 //module
 
@@ -21,14 +23,40 @@ label {
   display: block;
   margin: 10px 0 5px;
   color: $formLabelColor;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+  }
+}
+
+.label-checkbox {
+  color: $formInputColor;
 }
 
 input, textarea, select {
   color: $formInputColor;
-  padding: 3px 5px;
+  padding: $formInputPadding;
   border: 1px solid $formBorderColor;
   background: $formInputBackground;
   @include addPrefix(border-radius, $formRadius);
+
+  &:focus {
+    outline: none;
+    border-color: $formFocusBorderColor;
+  }
+
+  &[class*="span"] {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+textarea {
+  height: 100px;
+  resize: none;
 }
 
 input[type="file"] {
@@ -36,17 +64,86 @@ input[type="file"] {
   background: transparent;
 }
 
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
-
 select[multiple] {
   overflow: auto;
 }
 
+.checkboxgroup {
+  label {
+    @include inlineblock();
+    margin-left: 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.fieldgroup {
+  
+  input, select, label {
+    @include inlineblock();
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  } 
+
+  label {
+    input,select {
+      display: block;
+    }
+  }
+}
+
+.input-prepend,
+.input-append {
+  display: block;
+
+  .append, .prepend, input {
+    @include inlineblock();
+  }
+
+  .append, .prepend {
+    background: $formLabelColor;
+    color: $formInputBackground;
+    padding: $formInputPadding;
+    border: 1px solid $formLabelColor;
+  }
+}
+
+.input-prepend {
+  .prepend {
+    @include addPrefix(border-radius, $formRadius 0 0 $formRadius);
+  }
+  input {
+    @include addPrefix(border-radius, 0 $formRadius $formRadius 0);
+    margin-left: -4px;
+  }
+}
+
+.input-append{
+  .append {
+    @include addPrefix(border-radius, 0 $formRadius $formRadius 0 );
+    margin-left: -4px;
+  }
+  input {
+    @include addPrefix(border-radius, $formRadius 0 0 $formRadius);
+  }
+}
+
+.form-inline {
+
+  label, input, select {
+    @include inlineblock();
+    vertical-align: middle;
+  }
+  label {
+    vertical-align: baseline;
+    margin-right: 5px;
+  }
+}
 
 .form-full {
   input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),

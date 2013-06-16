@@ -404,22 +404,141 @@
                       %td 3
                       %td Mno Pqr
                       %td Super Duper Uber
-
               %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
                 %h3 Forms
                 %form{:action => ""}
-                  %label{:for => "example-1"} Input #1
-                  %input#example-1{:type => "text"}
+
+                  .row
+                    .span3
+                      %label{:for => "example-1"} Input #1
+                      %input#example-1{:type => "text"}
+                      
+                      %label{:for => "example-2"} Input #2
+                      %textarea{:id => "example-2", :name => "exaplme-2"}
+
+                    .span3
+                      %label What are you interested in?:
+                      %label.label-checkbox{:for => "checkbox-1"} 
+                        %input{:type => "checkbox", :name => "checkbox-1", :id => "checkbox-1", :value => "1"}
+                        Checkbox 1
+
+                      %label.label-checkbox{:for => "checkbox-2"} 
+                        %input{:type => "checkbox", :name => "checkbox-2", :id => "checkbox-2", :value => "2"}
+                        Checkbox 2
                   
-                  %label{:for => "example-2"} Input #2
-                  %input#example-2{:type => "text"}
-                  
-                  %label{:for => "example-3"} Input #3
-                  %input#example-3{:type => "text"}
-                  
+                      %label Pick One:
+                      %label.label-checkbox{:for => "radio-1"} 
+                        %input{:type => "radio", :name => "radios", :id => "radio-1", :value => "1"}
+                        Radio 1
+
+                      %label.label-checkbox{:for => "radio-2"} 
+                        %input{:type => "radio", :name => "radios", :id => "radio-2", :value => "2"}
+                        Radio 2
+
+                    .span3
+                      %label Size Fields with span* classes
+                      %input.span1#example-1{:type => "text"}
+                      %input.span2#example-1{:type => "text"}
+                      %input.span3#example-1{:type => "text"}
+
+                    .span6.clear
+                      %h4 Aligned Checkboxes/Radios
+
+                      .checkboxgroup
+                        %label.label-checkbox{:for => "checkbox-1"} 
+                          %input{:type => "checkbox", :name => "checkbox-1", :id => "checkbox-1", :value => "1"}
+                          Checkbox 1
+
+                        %label.label-checkbox{:for => "checkbox-2"} 
+                          %input{:type => "checkbox", :name => "checkbox-2", :id => "checkbox-2", :value => "2"}
+                          Checkbox 2
+
+                        %label.label-checkbox{:for => "checkbox-3"} 
+                          %input{:type => "checkbox", :name => "checkbox-3", :id => "checkbox-3", :value => "3"}
+                          Checkbox 3
+
+                      .checkboxgroup
+                        %label.label-checkbox{:for => "radio-1"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-1", :value => "1"}
+                          Radio Button 1
+
+                        %label.label-checkbox{:for => "radio-2"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-2", :value => "2"}
+                          Radio Button 2
+
+                        %label.label-checkbox{:for => "radio-3"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-3", :value => "3"}
+                          Radio Button 3
+
+                    .span3
+                      %h4 Prepend Inputs
+
+                      .input-prepend
+                        %span.prepend @
+                        %input#example-1{:type => "text"}
+
+                      %h4 Append Inputs
+
+                      .input-append
+                        %input#example-1{:type => "text"}
+                        %span.append .00
+
+                    .span6
+                      %h4 Field Group
+
+                      .fieldgroup
+                        %input.span2
+                        %select.span3
+                          %option Boom
+                          %option Bang
+                        %input.span1
+
+                      .fieldgroup
+                        %label
+                          City
+                          %input.span2
+
+                        %label
+                          State
+                          %input.span3
+                        %label
+                          Zip
+                          %input.span1
+
+                    .span9
+                      %h4 Togglebox Control
+
+                      .togglebox
+                        %select.box{:multiple => "multiple"}
+                          %option Uno
+                          %option Dose
+                          %option Three
+                        .toggleactions
+                          %a.btn{:href => "#", :data => {:action => "add"}} Add
+                          %a.btn{:href => "#", :data => {:action => "remove"}} Remove
+                        %select.box{:multiple => "multiple"}
+                      .togglefallback
+                        %select.box{:multiple => "multiple"}
+                          %option Uno
+                          %option Dose
+                          %option Three
+
+
                   .actions
                     %input.btn{:type => "submit", :value => "Submit"}
                     %input.btn.btn-link{:type => "button", :value => "Cancel"}
+
+
+                %h4 Inline Form
+
+                %form.form-inline{:action => "/", :method => "get"}
+
+                  %label Search
+                  %input.span4{:type => "text", :placeholder => "who am I?"}
+                  %input.btn.btn-small{:type => "submit", :value => "Search"}
+
+
+
               %section.example.hidden{:data => {:toggle => "buttons", :group => "modules"}}
                 %h3 Buttons
                 %p can be applied to input, button, or anchor tags
