@@ -61,3 +61,25 @@ $shimLarge: 30px;
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .row, [class^="span"] {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+
+    .row, .row [class^="span"] {
+      width: 100%;
+      margin-left: 0;
+      float: none;
+    }
+
+  }
+  
+
+}
+

@@ -144,6 +144,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .container { width: 980px; padding: 20px; margin: 0 auto; }
 
+@media (max-width: 767px) { .container { width: 100%; }
+  .row, [class^="span"] { width: 100%; margin-left: 0; float: none; }
+  .row .row, .row .row [class^="span"], [class^="span"] .row, [class^="span"] .row [class^="span"] { width: 100%; margin-left: 0; float: none; } }
 body { font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; color: #666666; background: white; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; font-weight: 300; color: #333333; }
