@@ -1,0 +1,70 @@
+.dropdown {
+
+  position: relative;
+
+  .link:after {
+    @extend .caret;
+    vertical-align: middle;
+    margin-left: 5px;
+    border-top-color: $linkColor;
+  }
+
+  .body {
+    padding-left: 0;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: ($navSidePadding / 2) - 1;
+
+    display: none;
+    width: 100%;
+
+    li, li a { 
+      background: $navBackground;
+      display: block;
+      width: 100% 
+    }
+  }
+
+  &:hover {
+
+    .body { display: block; }
+  }
+}
+
+.nav-box .dropdown {
+
+  .body {
+    li a {
+      border-width: 0 1px 1px;
+      @include addPrefix(border-radius, 0);
+    }
+    li:last-child a {
+      @include addPrefix(border-radius, 0 0 $navBorderRadius $navBorderRadius);
+    }
+  }
+}
+
+.dropdown-vertical {
+  .body {
+    left: 101%;
+    top: -1px;
+  }
+}
+
+.nav-box .dropdown-vertical {
+  .body {
+    li a {
+      border-width: 0 1px 1px;
+      @include addPrefix(border-radius, 0);
+    }
+    li:first-child a {
+      border-top-width: 1px;
+      @include addPrefix(border-radius, 0 $navBorderRadius 0 0);
+    }
+    li:last-child a {
+      @include addPrefix(border-radius, 0 0 $navBorderRadius 0 );
+    }
+  }
+}
+

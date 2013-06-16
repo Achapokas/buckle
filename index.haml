@@ -94,6 +94,8 @@
                 %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "navigation", :group => "modules"}} Navigation
                 %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "dropdowns", :group => "modules"}} Dropdowns
+                %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
                 %li
                   %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
@@ -224,6 +226,77 @@
                         %a{:href => "#"} Products
                       %li 
                         %a{:href => "#"} Career                
+              %section.example.hidden{:data => {:toggle => "dropdowns", :group => "modules"}}
+                %h3 Dropdowns
+                
+                .row
+                  .span4
+                    %ul.nav
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span4
+                    %ul.nav.nav-box
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span9
+                    %h4 Vertical Navigation Dropdown 
+                  .span2
+                    
+                    %ul.nav.nav-vertical
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown.dropdown-vertical
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span3.offset2
+                    %ul.nav.nav-box.nav-vertical
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown.dropdown-vertical
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
               %section.example.hidden{:data => {:toggle => "tables", :group => "modules"}}
                 %h3 Tables
             

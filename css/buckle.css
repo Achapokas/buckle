@@ -216,7 +216,7 @@ li p, li li { font-size: 1em; }
 
 .buffer-large { padding: 20px; }
 
-.caret { display: inline-block; width: 0; height: 0; vertical-align: top; border-top: 4px solid #7acf72; border-right: 4px solid transparent; border-left: 4px solid transparent; content: ""; }
+.caret, .dropdown .link:after { display: inline-block; width: 0; height: 0; vertical-align: top; border-top: 4px solid #7acf72; border-right: 4px solid transparent; border-left: 4px solid transparent; content: ""; }
 
 .logo { display: block; height: 100px; width: 200px; text-indent: -9999px; margin-top: 35px; background: url(../img/logo.png); }
 
@@ -243,9 +243,10 @@ ul ul, ul ol, ol ul, ol ol { padding-left: 15px; }
 
 .nav-vertical li { display: block; padding: 0; }
 .nav-vertical li:first-child { padding: 0; }
-.nav-vertical li a { display: block; padding: 5px 10px; }
+.nav-vertical a { display: block; padding: 5px 10px; }
+.nav-vertical a:hover { background: #eeeeee; }
 
-.nav-box a { text-decoration: none; border: 1px solid #dddddd; border-width: 1px 1px 1px 0; }
+.nav-box a { background: white; text-decoration: none; border: 1px solid #dddddd; border-width: 1px 1px 1px 0; }
 .nav-box a:hover { background: #eeeeee; }
 .nav-box a.active { background: #3a8eef; border-color: #3a8eef; color: white; }
 .nav-box li:first-child a { border-width: 1px; -webkit-border-radius: 3px 0 0 3px; -moz-border-radius: 3px 0 0 3px; -ms-border-radius: 3px 0 0 3px; -o-border-radius: 3px 0 0 3px; border-radius: 3px 0 0 3px; }
@@ -263,6 +264,21 @@ ul ul, ul ol, ol ul, ol ol { padding-left: 15px; }
 .nav-bordered li { padding: 5px 0; }
 .nav-bordered a { border-left: 1px solid #dddddd; padding-left: 8px; padding: 0 10px; }
 .nav-bordered li:first-child a { border-left: 0; }
+
+.dropdown { position: relative; }
+.dropdown .link:after { vertical-align: middle; margin-left: 5px; border-top-color: #3a8eef; }
+.dropdown .body { padding-left: 0; position: absolute; z-index: 10; top: 100%; left: 4px; display: none; width: 100%; }
+.dropdown .body li, .dropdown .body li a { background: white; display: block; width: 100%; }
+.dropdown:hover .body { display: block; }
+
+.nav-box .dropdown .body li a { border-width: 0 1px 1px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.nav-box .dropdown .body li:last-child a { -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -ms-border-radius: 0 0 3px 3px; -o-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px; }
+
+.dropdown-vertical .body { left: 101%; top: -1px; }
+
+.nav-box .dropdown-vertical .body li a { border-width: 0 1px 1px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.nav-box .dropdown-vertical .body li:first-child a { border-top-width: 1px; -webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; -ms-border-radius: 0 3px 0 0; -o-border-radius: 0 3px 0 0; border-radius: 0 3px 0 0; }
+.nav-box .dropdown-vertical .body li:last-child a { -webkit-border-radius: 0 0 3px 0; -moz-border-radius: 0 0 3px 0; -ms-border-radius: 0 0 3px 0; -o-border-radius: 0 0 3px 0; border-radius: 0 0 3px 0; }
 
 .btn { display: inline-block; font-size: .9em; text-decoration: none; background: transparent; background-color: #2475d1; background-image: linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -o-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -moz-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -webkit-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); background-image: -ms-linear-gradient(top, #3a8eef 0%, #0f5cb4 100%); color: white; border: 1px solid #0f5cb4; padding: 5px 10px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); }
 .btn:hover, .btn.active { color: white; background-color: #236fc6; background-image: linear-gradient(top, #3a8eef 0%, #0d509d 100%); background-image: -o-linear-gradient(top, #3a8eef 0%, #0d509d 100%); background-image: -moz-linear-gradient(top, #3a8eef 0%, #0d509d 100%); background-image: -webkit-linear-gradient(top, #3a8eef 0%, #0d509d 100%); background-image: -ms-linear-gradient(top, #3a8eef 0%, #0d509d 100%); }
