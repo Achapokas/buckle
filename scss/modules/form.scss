@@ -2,6 +2,15 @@
 // Form
 // ============================================
 
+//variables
+$formLabelColor: $appPrimary;
+$formInputColor: $textColor;
+$formBorderColor: $appBorderColor;
+$formInputBackground: lighten($appShadeColor, 5);
+$formRadius: $appRadius;
+
+//module
+
 form {
   .actions {
     padding: 15px 0;
@@ -11,14 +20,15 @@ form {
 label {
   display: block;
   margin: 10px 0 5px;
-  color: $appTertiary;
+  color: $formLabelColor;
 }
 
 input, textarea, select {
-  color: $appQuaternaryText;
+  color: $formInputColor;
   padding: 3px 5px;
-  border: 1px solid $appTertiary;
-  @include gradient(#fff, $appQuaternaryLight); //needs adjustment
+  border: 1px solid $formBorderColor;
+  background: $formInputBackground;
+  @include addPrefix(border-radius, $formRadius);
 }
 
 input[type="file"] {
@@ -37,19 +47,6 @@ select[multiple] {
   overflow: auto;
 }
 
-//login
-
-.form-login {
-  background: $appQuaternaryLight;
-  padding: 20px;
-  @include addPrefix(border-radius, 5px);
-  position: absolute;
-  @include addPrefix(animation, slideIn 1.5s);
-
-  h3 {
-    color: $appQuaternary;
-  }
-}
 
 .form-full {
   input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
