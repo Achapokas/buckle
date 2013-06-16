@@ -6,7 +6,7 @@
 $btnBackground : $linkHoverColor;
 $btnHighlight  : $linkColor;
 $btnHover      : darken($linkHoverColor, 5);
-$btnTextColor  : white;
+$btnTextColor  : $bodyColor;
 
 $btnSecondaryBackground : #d9d9d9;
 $btnSecondaryHighlight  : lighten($btnSecondaryBackground, 10);

@@ -4,7 +4,7 @@
 
 //variables
 $modalOverlayColor: rgba(0,0,0,0.8);
-$modalBodyColor: white;
+$modalBodyColor: $bodyColor;
 $modalHeaderColor: $appPrimary;
 $modalTitleColor: $modalBodyColor;
 $modalCloseBtnColor: $modalBodyColor;

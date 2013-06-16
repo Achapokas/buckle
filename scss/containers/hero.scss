@@ -1,6 +1,16 @@
+// ============================================
+// Hero Container
+// ============================================
+
+//variables
+$heroBackground: $headingColor;
+$heroTextColor: $bodyColor;
+
+//container
+
 .hero {
-  background: #333;
+  background: $heroBackground;
   h1,h2, p, li {
-    color: white;
+    color: $heroTextColor;
   }
 }
