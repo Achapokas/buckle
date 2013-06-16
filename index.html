@@ -758,7 +758,13 @@
                   <a class="active" data-action="toggle" data-group="containers" data-target="highlevel" href="#">High Level</a>
                 </li>
                 <li>
+                  <a data-action="toggle" data-group="containers" data-target="media" href="#">Media</a>
+                </li>
+                <li>
                   <a data-action="toggle" data-group="containers" data-target="widget" href="#">Widget</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="containers" data-target="callout" href="#">Callout</a>
                 </li>
                 <li>
                   <a data-action="toggle" data-group="containers" data-target="hero" href="#">Hero</a>
@@ -772,6 +778,16 @@
               <section class="example" data-group="containers" data-toggle="highlevel">
                 <h3>High Level Containers</h3>
                 <p>The high level containers file holds some of your most outer containers used as a standard for marking-up your Buckle friendly HTML pages. Header, Footer, and your Content area will sometimes call for some unique padding, colors, and overall style properties. This is where those should go. By default, there is little to nothing in this file; it merely serves as a reminder to where that stuff belongs when you go to add it. You are welcome :P</p>
+              </section>
+              <section class="example hidden" data-group="containers" data-toggle="media">
+                <h3>The Media Object</h3>
+                <p>The object we know and love. Its a container</p>
+                <div class="media">
+                  <img alt="Placeholder" class="img" src="http://placehold.it/100x100">
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, voluptatibus, dolores, debitis, dolorem fugiat possimus rem aliquam sit maxime facere reprehenderit illum provident optio! Iste necessitatibus ad voluptas vero vel.</p>
+                  </div>
+                </div>
               </section>
               <section class="example hidden" data-group="containers" data-toggle="widget">
                 <h3>Widget Containers</h3>
@@ -841,16 +857,69 @@
                   </div>
                 </div>
               </section>
+              <section class="example hidden" data-group="containers" data-toggle="callout">
+                <h3>Callout Container</h3>
+                <div class="row">
+                  <div class="span3">
+                    <div class="callout">
+                      <h2>Heads Up!</h2>
+                      <div class="body">
+                        <p>Something that you should pay attention to is put here, maybe a note about something cool going on.</p>
+                        <a href="#">read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span6">
+                    <div class="callout">
+                      <h2>Heads Up!</h2>
+                      <div class="body">
+                        <p>Something that you should pay attention to is put here, maybe a note about something cool going on.</p>
+                        <a href="#">read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
               <section class="example hidden" data-group="containers" data-toggle="hero">
                 <h3>Hero Container</h3>
                 <div class="hero huge buffer-large">
-                  <h1>I Am Superman</h1>
+                  <h1>I'm Batman</h1>
                   <p>A hero container is used as a attention grabbing, bold callout.</p>
                 </div>
               </section>
               <section class="example hidden" data-group="containers" data-toggle="navbar">
                 <h3>NavBar Container</h3>
                 <p>Bars for all the navs</p>
+                <div class="navbar">
+                  <div class="pull-left">
+                    <h1>
+                      <a href="#">Buckle</a>
+                    </h1>
+                    <p class="tagline">Your Tagline wants it.</p>
+                  </div>
+                  <ul class="nav pull-right">
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li class="dropdown">
+                      <a class="link" href="#">Products</a>
+                      <ul class="body">
+                        <li>
+                          <a href="#">Cars</a>
+                        </li>
+                        <li>
+                          <a href="#">Trucks</a>
+                        </li>
+                        <li>
+                          <a href="#">SUVs</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                  </ul>
+                </div>
               </section>
             </div>
           </div>

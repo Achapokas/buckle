@@ -8,14 +8,14 @@
 //module
 
 .dropdown {
-
+  margin-left: -3px !important;
   position: relative;
 
   .link:after {
     @extend .caret;
     vertical-align: middle;
     margin-left: 5px;
-    border-top-color: $linkColor;
+    border-top-color: inherit;
   }
 
   .body {
@@ -27,6 +27,10 @@
 
     display: none;
     width: 100%;
+
+    li {
+      margin-left: -5px;
+    }
 
     li, li a { 
       background: $navBackground;
@@ -46,7 +50,12 @@
   .body {
     li a {
       border-width: 0 1px 1px;
+      text-decoration: none;
       @include addPrefix(border-radius, 0);
+
+      &:hover {
+        background: $navHoverColor;
+      }
     }
     li:last-child a {
       @include addPrefix(border-radius, 0 0 $navBorderRadius $navBorderRadius);
@@ -55,6 +64,8 @@
 }
 
 .dropdown-vertical {
+  margin-left: 0 !important;
+  
   .body {
     left: 101%;
     top: -1px;

@@ -3,7 +3,7 @@
 // ============================================
 
 .media {
-  margin: 10px;
+  margin: 10px 0;
 
   .img {
     float:left; 
@@ -19,7 +19,13 @@
     margin-left: 10px;
   }
 
+  .body {
+    p {
+      margin: 0;
+    }
+  }
+
 }
-.media, .body {
+.media, .media .body {
   @include applyClearfix();
 }
