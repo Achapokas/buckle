@@ -7,6 +7,8 @@ Buckle is a CSS template meant to be a starting point for any project -- small o
 
 This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap -- as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
 
+(See the live sample page)[http://buckle.mttdffy.com]
+
 
 License
 ----------
