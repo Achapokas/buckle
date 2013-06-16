@@ -1,4 +1,8 @@
+// ============================================
+// Tables
+// ============================================
 
+//variables
 $tableHeadColor: $appSecondary;
 
 $tableBtnRadius: $appRadius;
@@ -7,6 +11,8 @@ $tableStripeColor: $appShadeColor;
 $tableStripeHeadColor: $appPrimary;
 $tableHoverColor: $appSecondaryLight;
 $tableHoverTextColor: $bodyColor;
+
+//modules
 
 table {
   width: 100%;
