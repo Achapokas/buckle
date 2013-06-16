@@ -1,11 +1,36 @@
 var app = {};
 
 
+//@codekit-append "lib/jquery.enhancement.js";
 //@codekit-append "actions.js";
 //@codekit-append "store.js";
 //@codekit-append "alerts.js";
 //@codekit-append "modals.js";
+//@codekit-append "toggle.js";
 //@codekit-append "togglebox.js";
+
+/* **********************************************
+     Begin jquery.enhancement.js
+********************************************** */
+
+(function($){
+
+  $.fn.show = function() {
+    this.removeClass('hidden');
+    return this;
+  }
+
+  $.fn.hide = function() {
+    this.addClass('hidden');
+    return this;
+  }
+
+  $.fn.toggle = function (){
+    this.hasClass('hidden') ? this.show() : this.hide();
+    return this;
+  }
+
+})(jQuery);
 
 /* **********************************************
      Begin actions.js
@@ -59,10 +84,6 @@ app.actions = (function ($, global) {
      Begin store.js
 ********************************************** */
 
-// ============================================
-// Store - localStorage
-// ============================================
-
 app.store = (function(m){
 
   var _this = {};
@@ -96,10 +117,6 @@ app.store = (function(m){
 /* **********************************************
      Begin alerts.js
 ********************************************** */
-
-// ============================================
-// Alerts
-// ============================================
 
 app.alerts = (function ($, global, alertSelector) {
  
@@ -154,42 +171,34 @@ app.alerts = (function ($, global, alertSelector) {
      Begin modals.js
 ********************************************** */
 
-// ============================================
-// Modal
-// ============================================
-
-app.modal = (function ($, modal) {
+app.modal = (function ($, global) {
  
+  var modal = global.find('.modal');
   if(modal.length < 1) { return {} }
+
   if(!modal.is(":hidden")) { modal.addClass("hidden"); }
   
-  var container, body, loader;
+  var container, body, loader, remote;
 
-  container = modal.find("#modal-content");
-  body      = container.find("#modal-body");
+  container = modal.find(".wrapper");
+  body      = container.find(".body");
   loader    = modal.find(".loader");
 
   // Events
 
-  $(document)
-    .on('click', 'a[data-action=modal]', registerModalTrigger)
-    .on("ajax:modal:load", loadContent);
+  global
+    .on('click', 'a[data-action=modal]:not([data-url])', loadModal)
 
   modal
     .on("click", "a[data-action=dismiss]", hideModal)
 
-    
 
-  function show(content) {
-    if(content) { body.html(content) }
-    modal.add(container)
-      .removeClass("hidden");
-  }
+  function loadModal(e){
+    e.preventDefault();
 
-  function hide(persistBody) {
-    modal.add(container)
-      .addClass("hidden");
-    if(!persistBody) { body.empty(); }
+    var content;
+    content = global.find($(e.target).attr('href')).clone();
+    show(content.show());
   }
 
   function hideModal(e) { 
@@ -197,42 +206,140 @@ app.modal = (function ($, modal) {
     hide(false); 
   }
 
-  function hideLoader() {
-    loader.addClass('hidden');
+  function show(content) {
+    if(content) { body.html(content) }
+    modal.add(container)
+      .removeClass("hidden");
+    app.actions.trigger('modal:open');
   }
 
-  function registerModalTrigger(e) {
-    modal.add(loader).removeClass("hidden");
+  function hide(persistBody) {
+    modal.add(container)
+      .addClass("hidden");
+    if(!persistBody) { body.empty(); }
+    app.actions.trigger('modal:close');
   }
 
-  function loadContent(event, content, action, actionContent) {
 
-    if(!modal.is(":hidden")) {
-      body.html(content);
-      container.removeClass("hidden");
-      hideLoader();
+  //remote trigger
+
+  remote = (function() {
+
+    global
+      .on('click', 'a[data-action=modal][data-url]', registerModalTrigger)
+      .on("ajax:modal:load", loadContent);
+
+    function hideLoader() {
+      loader.addClass('hidden');
     }
-    
-    if (action) {
-      app.actions.trigger(action, actionContent);
-      //console.log(action + " triggered!");
+
+    function registerModalTrigger(e) {
+      e.preventDefault();
+
+      var url = $(e.target).data('url')
+
+      modal.add(loader).removeClass("hidden");
+      
+      $.ajax({
+        url: url, 
+        type: 'GET',
+        success: parseData, 
+        error: handleError
+      });
     }
-  }
+
+    function parseData(data){
+      if(data) app.actions.trigger('ajax:modal:load', data);
+    }
+
+    function handleError(e){
+      console.log(e);
+    }
+
+    function loadContent(event, content, action, actionContent) {
+
+      if(!modal.is(":hidden")) {
+        show(content);
+        hideLoader();
+      }
+      
+      if (action) {
+        app.actions.trigger(action, actionContent);
+        //console.log(action + " triggered!");
+      }
+    }
+
+    return {
+      hideLoader: hideLoader, loadContent: loadContent
+    };
+
+  })(); //remote
 
   return {
-    el : modal, body: body, container: container,
-    show: show, hide: hide, hideLoader: hideLoader, loadContent: loadContent
+    el          : modal, 
+    body        : body, 
+    container   : container,
+    show        : show, 
+    hide        : hide
   };
 
-})(jQuery, jQuery('#modal'));
+})(jQuery, jQuery(document));
+
+/* **********************************************
+     Begin toggle.js
+********************************************** */
+
+app.toggle = (function($, global){
+
+  var toggleBtns = global.find('[data-action="toggle"]');
+  if(!toggleBtns.length) return;
+
+  var toggleSections;
+
+  global.on('click', '[data-action="toggle"]', toggle);
+
+  function toggle(e) {
+    e.preventDefault();
+
+    var btn, group, target, section,
+        btnGroup, sectionGroup;
+
+    btn           = $(e.target);
+    if(btn.hasClass('active')) return;
+
+    group         = btn.data('group');
+    toggleTarget  = btn.data('target');
+
+    btnGroup      = global.find('[data-action="toggle"][data-group="'+group+'"]');
+    sectionGroup  = global.find('[data-toggle][data-group="'+group+'"]');
+
+    section       = sectionGroup.filter('[data-toggle="'+ toggleTarget +'"]');
+
+    btnGroup.removeClass('active');
+    btn.addClass('active');
+
+    sectionGroup.hide();
+    section.show();
+
+    app.actions.trigger('toggle:' + group, [toggleTarget]);
+  }
+
+  //return
+  return {};
+
+})(jQuery, jQuery(document));
+
+// Example listening to toggle events
+// (function($, global){
+
+//   global.on('toggle:modules', function(e, link){
+//     console.log(link);
+//   })
+// })(jQuery, jQuery(document));
 
 /* **********************************************
      Begin togglebox.js
 ********************************************** */
-
-// ============================================
-// Togglebox
-// ============================================
 
 app.togglebox = (function ($, global) {
  

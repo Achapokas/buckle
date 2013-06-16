@@ -1,286 +1,884 @@
 <!DOCTYPE html>
-<html lang="en">
+<body>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="author" content="Matt Duffy" />
-
-    <link rel="shortcut icon" href="/favicon.ico" />
-    
-    <link rel="stylesheet" href="css/buckle.css"/>
-
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Buckle</title>
+    <meta content="" name="description">
+    <meta content="Matt Duffy" name="author">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="css/buckle.css" rel="stylesheet">
     <script src="js/lib/modernizr.js"></script>
-    
   </head>
-
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="pull-left"><a href="/">Buckle</a></h1>
-        
+    <header>
+      <div class="container clearfix">
+        <h1 class="pull-left">
+          <a href="/">Buckle</a>
+        </h1>
         <nav class="pull-right">
-          <ul class="nav nav-main">
-            <li><a href="#">Base</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Pages</a></li>
+          <ul class="nav nav-feature">
+            <li>
+              <a href="#intro">What is it?</a>
+            </li>
+            <li>
+              <a href="#grid">Grid</a>
+            </li>
+            <li>
+              <a href="#components">Components</a>
+            </li>
           </ul>
         </nav>
-      </header>
-      <section class="content">
-
+      </div>
+    </header>
+    <section class="hero medium" id="intro">
+      <div class="container">
         <div class="row">
-          
           <article class="span8">
             <h2>What is this?</h2>
             <p>
               Buckle is a CSS template meant to be a starting point for any project &ndash; small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
             </p>
-
             <p>
               This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap &ndash; as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
             </p>
           </article>
-
         </div>
-        <div class="row">
-
-          <article class="span4">
-            <h2>Base</h2>
-            <p>Info goes here</p>
-          </article>
-
-          <article class="span4">
-            <h2>Modules</h2>
-            <p>Info goes here</p>
-          </article>
-
-          <article class="span4">
-            <h2>Pages</h2>
-            <p>Info goes here</p>
-          </article>
-
-        </div>
-
+      </div>
+    </section>
+    <section class="container content">
+      <article id="grid">
         <h2>Grid</h2>
-
+        <p>Flexible. Nestable. Layout your pages in no time.</p>
         <div class="row row-test">
           <div class="span12"></div>
-          
           <div class="span6"></div>
-          <div class="span6"></div>
-          
+          <div class="span6">
+            <div class="row">
+              <div class="span3"></div>
+              <div class="span3"></div>
+            </div>
+          </div>
           <div class="span4"></div>
           <div class="span4"></div>
           <div class="span4"></div>
-          
           <div class="span3"></div>
           <div class="span3"></div>
           <div class="span3"></div>
           <div class="span3"></div>
-
           <div class="span3"></div>
           <div class="span6"></div>
+          <div class="span3">
+            <div class="row">
+              <div class="span2"></div>
+              <div class="span1"></div>
+            </div>
+          </div>
           <div class="span3"></div>
-
-          <div class="span3"></div>
-          <div class="span9"></div>
+          <div class="span9">
+            <div class="row">
+              <div class="span6"></div>
+              <div class="span3"></div>
+            </div>
+          </div>
+          <div class="span2"></div>
+          <div class="span8"></div>
+          <div class="span2"></div>
+          <div class="span6"></div>
+          <div class="span2"></div>
+          <div class="span2"></div>
+          <div class="span2"></div>
+          <div class="span8"></div>
+          <div class="span1"></div>
+          <div class="span1"></div>
+          <div class="span2"></div>
         </div>
-
-        <!-- Modal -->
-        <section class="example-section">
-          <h2>Modal</h2>
-
-          <a href="#" data-action="modal">Open Modal</a>
-
-          <div id="modal" class="hidden">
-            <div id="modal-content" class="hidden">
-              <div id="modal-header" class="clearfix">
-                <span class="modal-title"></span>
-                <a href="#" class="btn-close" data-action="dismiss">&times;</a>
-              </div>
-              <section id="modal-body"></section>
+      </article>
+      <article id="components">
+        <ul class="nav nav-box shim-large">
+          <li>
+            <a class="active" data-action="toggle" data-group="components" data-target="modules" href="#modules">Modules</a>
+          </li>
+          <li>
+            <a data-action="toggle" data-group="components" data-target="containers" href="#containers">Containers</a>
+          </li>
+        </ul>
+        <section data-group="components" data-toggle="modules">
+          <h2 class="shim">Modules</h2>
+          <div class="row">
+            <div class="span3">
+              <ul class="nav nav-vertical nav-box">
+                <li>
+                  <a class="active" data-action="toggle" data-group="modules" data-target="lists" href="#">Lists</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="navigation" href="#">Navigation</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="dropdowns" href="#">Dropdowns</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="tables" href="#">Tables</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="forms" href="#">Forms</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="buttons" href="#">Buttons</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="alerts" href="#">Alerts</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="modules" data-target="modals" href="#">Modals</a>
+                </li>
+              </ul>
             </div>
-            <div class="loader hidden"></div>
+            <div class="span9">
+              <section class="example" data-group="modules" data-toggle="lists">
+                <h3>Lists</h3>
+                <p>When don't you need to list something for your website &ndash; features, instructions, summaries. There a necessity, and thats why Buckle provides you with a couple list types out of the box.</p>
+                <div class="row">
+                  <div class="span3">
+                    <h4>Standard ul List</h4>
+                    <ul>
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ul>
+                  </div>
+                  <div class="span3">
+                    <h4>A "ul", class "unstyled"</h4>
+                    <ul class="unstyled">
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two - This is the second list item for the sublist under the second item in the main list.</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ul>
+                  </div>
+                  <div class="span3">
+                    <h4>A "ul", class "list"</h4>
+                    <ol class="list">
+                      <li>One</li>
+                      <li>
+                        Two
+                        <ul>
+                          <li>Two One</li>
+                          <li>Two Two - This is the second list item for the sublist under the second item in the main list.</li>
+                        </ul>
+                      </li>
+                      <li>Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?</li>
+                    </ol>
+                  </div>
+                  <div class="span6">
+                    <h4>A "ul", class "list"</h4>
+                    <ul class="list list-horizontal">
+                      <li>One</li>
+                      <li>Two</li>
+                      <li>Three</li>
+                      <li>Four</li>
+                      <li>Five</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="navigation">
+                <h3>Navigation</h3>
+                <p>Any set of links should be considered a type of navigation. With the base types of navigation provided here, you should be able to get 90% to what your navigation will need to look like. By subclasses these classes, you should be able to achieve any type of navigation type with very few added lines of CSS.</p>
+                <div class="row">
+                  <div class="span4">
+                    <h4>Basic Navigation</h4>
+                    <ul class="nav">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Bordered Navigation</h4>
+                    <ul class="nav nav-bordered">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Box Navigation</h4>
+                    <ul class="nav nav-box">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span5">
+                    <h4>Feature Navigation</h4>
+                    <ul class="nav nav-feature">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Vertical Navigation</h4>
+                    <ul class="nav nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <h4>Putting it together</h4>
+                    <p>look familiar?</p>
+                    <ul class="nav nav-box nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                      <li>
+                        <a href="#">Products</a>
+                      </li>
+                      <li>
+                        <a href="#">Career</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="dropdowns">
+                <h3>Dropdowns</h3>
+                <div class="row">
+                  <div class="span4">
+                    <ul class="nav">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="link" href="#">Products</a>
+                        <ul class="body">
+                          <li>
+                            <a href="#">Cars</a>
+                          </li>
+                          <li>
+                            <a href="#">Trucks</a>
+                          </li>
+                          <li>
+                            <a href="#">SUVs</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span4">
+                    <ul class="nav nav-box">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="link" href="#">Products</a>
+                        <ul class="body">
+                          <li>
+                            <a href="#">Cars</a>
+                          </li>
+                          <li>
+                            <a href="#">Trucks</a>
+                          </li>
+                          <li>
+                            <a href="#">SUVs</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span9">
+                    <h4>Vertical Navigation Dropdown</h4>
+                  </div>
+                  <div class="span2">
+                    <ul class="nav nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="dropdown dropdown-vertical">
+                        <a class="link" href="#">Products</a>
+                        <ul class="body">
+                          <li>
+                            <a href="#">Cars</a>
+                          </li>
+                          <li>
+                            <a href="#">Trucks</a>
+                          </li>
+                          <li>
+                            <a href="#">SUVs</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="span3 offset2">
+                    <ul class="nav nav-box nav-vertical">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="dropdown dropdown-vertical">
+                        <a class="link" href="#">Products</a>
+                        <ul class="body">
+                          <li>
+                            <a href="#">Cars</a>
+                          </li>
+                          <li>
+                            <a href="#">Trucks</a>
+                          </li>
+                          <li>
+                            <a href="#">SUVs</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">About</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="tables">
+                <h3>Tables</h3>
+                <h4>Default Style &mdash; No classes</h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Something</th>
+                      <th>Else</th>
+                      <th>Here</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Abc Def</td>
+                      <td>Alpha Beta</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ghi Jkl</td>
+                      <td>Gamma Delta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mno Pqr</td>
+                      <td>Super Duper Uber</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4>Basic Style &mdash; "table" class</h4>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Something</th>
+                      <th>Else</th>
+                      <th>Here</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Abc Def</td>
+                      <td>Alpha Beta</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ghi Jkl</td>
+                      <td>Gamma Delta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mno Pqr</td>
+                      <td>Super Duper Uber</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4>Striped &mdash; "table table-striped" class</h4>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Something</th>
+                      <th>Else</th>
+                      <th>Here</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Abc Def</td>
+                      <td>Alpha Beta</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ghi Jkl</td>
+                      <td>Gamma Delta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mno Pqr</td>
+                      <td>Super Duper Uber</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4>Basic-Small Style &mdash; "table table-small" class</h4>
+                <table class="table table-small">
+                  <thead>
+                    <tr>
+                      <th>Something</th>
+                      <th>Else</th>
+                      <th>Here</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Abc Def</td>
+                      <td>Alpha Beta</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ghi Jkl</td>
+                      <td>Gamma Delta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mno Pqr</td>
+                      <td>Super Duper Uber</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4>Basic Table with Hover &mdash; "table table-hover" class</h4>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Something</th>
+                      <th>Else</th>
+                      <th>Here</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Abc Def</td>
+                      <td>Alpha Beta</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ghi Jkl</td>
+                      <td>Gamma Delta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mno Pqr</td>
+                      <td>Super Duper Uber</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="forms">
+                <h3>Forms</h3>
+                <form action="">
+                  <div class="row">
+                    <div class="span3">
+                      <label for="example-1">Input #1</label>
+                      <input id="example-1" type="text">
+                      <label for="example-2">Input #2</label>
+                      <textarea id="example-2" name="exaplme-2"></textarea>
+                    </div>
+                    <div class="span3">
+                      <label>What are you interested in?:</label>
+                      <label class="label-checkbox" for="checkbox-1">
+                        <input id="checkbox-1" name="checkbox-1" type="checkbox" value="1">
+                        Checkbox 1
+                      </label>
+                      <label class="label-checkbox" for="checkbox-2">
+                        <input id="checkbox-2" name="checkbox-2" type="checkbox" value="2">
+                        Checkbox 2
+                      </label>
+                      <label>Pick One:</label>
+                      <label class="label-checkbox" for="radio-1">
+                        <input id="radio-1" name="radios" type="radio" value="1">
+                        Radio 1
+                      </label>
+                      <label class="label-checkbox" for="radio-2">
+                        <input id="radio-2" name="radios" type="radio" value="2">
+                        Radio 2
+                      </label>
+                    </div>
+                    <div class="span3">
+                      <label>Size Fields with span* classes</label>
+                      <input class="span1" id="example-1" type="text">
+                      <input class="span2" id="example-1" type="text">
+                      <input class="span3" id="example-1" type="text">
+                    </div>
+                    <div class="span6 clear">
+                      <h4>Aligned Checkboxes/Radios</h4>
+                      <div class="checkboxgroup">
+                        <label class="label-checkbox" for="checkbox-1">
+                          <input id="checkbox-1" name="checkbox-1" type="checkbox" value="1">
+                          Checkbox 1
+                        </label>
+                        <label class="label-checkbox" for="checkbox-2">
+                          <input id="checkbox-2" name="checkbox-2" type="checkbox" value="2">
+                          Checkbox 2
+                        </label>
+                        <label class="label-checkbox" for="checkbox-3">
+                          <input id="checkbox-3" name="checkbox-3" type="checkbox" value="3">
+                          Checkbox 3
+                        </label>
+                      </div>
+                      <div class="checkboxgroup">
+                        <label class="label-checkbox" for="radio-1">
+                          <input id="radio-1" name="radio" type="radio" value="1">
+                          Radio Button 1
+                        </label>
+                        <label class="label-checkbox" for="radio-2">
+                          <input id="radio-2" name="radio" type="radio" value="2">
+                          Radio Button 2
+                        </label>
+                        <label class="label-checkbox" for="radio-3">
+                          <input id="radio-3" name="radio" type="radio" value="3">
+                          Radio Button 3
+                        </label>
+                      </div>
+                    </div>
+                    <div class="span3">
+                      <h4>Prepend Inputs</h4>
+                      <div class="input-prepend">
+                        <span class="prepend">@</span>
+                        <input id="example-1" type="text">
+                      </div>
+                      <h4>Append Inputs</h4>
+                      <div class="input-append">
+                        <input id="example-1" type="text">
+                        <span class="append">.00</span>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <h4>Field Group</h4>
+                      <div class="fieldgroup">
+                        <input class="span2">
+                        <select class="span3">
+                          <option>Boom</option>
+                          <option>Bang</option>
+                        </select>
+                        <input class="span1">
+                      </div>
+                      <div class="fieldgroup">
+                        <label>
+                          City
+                          <input class="span2">
+                        </label>
+                        <label>
+                          State
+                          <input class="span3">
+                        </label>
+                        <label>
+                          Zip
+                          <input class="span1">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="span9">
+                      <h4>Togglebox Control</h4>
+                      <div class="togglebox">
+                        <select class="box" multiple="multiple">
+                          <option>Uno</option>
+                          <option>Dose</option>
+                          <option>Three</option>
+                        </select>
+                        <div class="toggleactions">
+                          <a class="btn" data-action="add" href="#">Add</a>
+                          <a class="btn" data-action="remove" href="#">Remove</a>
+                        </div>
+                        <select class="box" multiple="multiple"></select>
+                      </div>
+                      <div class="togglefallback">
+                        <select class="box" multiple="multiple">
+                          <option>Uno</option>
+                          <option>Dose</option>
+                          <option>Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <input class="btn" type="submit" value="Submit">
+                    <input class="btn btn-link" type="button" value="Cancel">
+                  </div>
+                </form>
+                <h4>Inline Form</h4>
+                <form action="/" class="form-inline" method="get">
+                  <label>Search</label>
+                  <input class="span4" placeholder="who am I?" type="text">
+                  <input class="btn btn-small" type="submit" value="Search">
+                </form>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="buttons">
+                <h3>Buttons</h3>
+                <p>can be applied to input, button, or anchor tags</p>
+                <a class="btn" href="#">I'm a standard button</a>
+                <a class="btn btn-secondary" href="#">I'm a secondary action button</a>
+                <a class="btn btn-link" href="#">I'm a button styled like a link</a>
+                <h4>Modifiers</h4>
+                <div class="row">
+                  <div class="span4">
+                    <h4>Small Button</h4>
+                    <a class="btn btn-small" href="#">Save all changes</a>
+                  </div>
+                  <div class="span5">
+                    <h4>Large Button</h4>
+                    <a class="btn btn-large" href="#">Sign Up Today!</a>
+                  </div>
+                  <div class="span9">
+                    <h4>block-level</h4>
+                    <a class="btn btn-block" href="#">I Accept the Terms &amp; Conditions. Lets Do This!</a>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="alerts">
+                <h3>Alerts</h3>
+                <div id="alerts">
+                  <div class="alert">
+                    Just gotta let you know about this.
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                  </div>
+                  <div class="alert alert-success">
+                    Something happended successfully!
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                  </div>
+                  <div class="alert alert-warning">
+                    Watch out! This is something to be careful about.
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                  </div>
+                  <div class="alert alert-error">
+                    There was an error doing something!
+                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="modules" data-toggle="modals">
+                <h3>Modal</h3>
+                <p>You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.</p>
+                <a class="btn" data-action="modal" href="#some_content">Load Local Content</a>
+                <a class="btn" data-action="modal" data-url="ajax.html" href="#">Load Remote Content</a>
+                <div class="hidden" id="some_content">
+                  <h2>This is modal content!</h2>
+                  <p>
+                    Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
+                  </p>
+                </div>
+                <div class="modal hidden">
+                  <div class="wrapper hidden">
+                    <div class="header clearfix">
+                      <span class="title"></span>
+                      <a class="btn-close" data-action="dismiss" href="#">&times;</a>
+                    </div>
+                    <section class="body"></section>
+                  </div>
+                  <div class="loader hidden"></div>
+                </div>
+              </section>
+            </div>
           </div>
         </section>
-        
-        <section class="example-section">
-          <h2>Alerts</h2>
-
-          <div id="alerts">  
-            <div class="alert alert-notice">
-              Something happended successfully!
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <section class="hidden" data-group="components" data-toggle="containers">
+          <h2 class="shim">Containers</h2>
+          <div class="row">
+            <div class="span3">
+              <ul class="nav nav-vertical nav-box">
+                <li>
+                  <a class="active" data-action="toggle" data-group="containers" data-target="highlevel" href="#">High Level</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="containers" data-target="widget" href="#">Widget</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="containers" data-target="hero" href="#">Hero</a>
+                </li>
+                <li>
+                  <a data-action="toggle" data-group="containers" data-target="navbar" href="#">NavBar</a>
+                </li>
+              </ul>
             </div>
-            <div class="alert alert-error">
-              There was an error doing something!
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <div class="span9">
+              <section class="example" data-group="containers" data-toggle="highlevel">
+                <h3>High Level Containers</h3>
+                <p>The high level containers file holds some of your most outer containers used as a standard for marking-up your Buckle friendly HTML pages. Header, Footer, and your Content area will sometimes call for some unique padding, colors, and overall style properties. This is where those should go. By default, there is little to nothing in this file; it merely serves as a reminder to where that stuff belongs when you go to add it. You are welcome :P</p>
+              </section>
+              <section class="example hidden" data-group="containers" data-toggle="widget">
+                <h3>Widget Containers</h3>
+                <div class="row">
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="widget">
+                      <div class="title">
+                        <h4>Some Title</h4>
+                      </div>
+                      <div class="body">
+                        <p>Stuff in here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span9">
+                    <h4 class="shim">Widget Group</h4>
+                    <div class="row">
+                      <div class="span3">
+                        <div class="widgetgroup">
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                          <div class="widget">
+                            <div class="title">
+                              <h4>Some Title</h4>
+                            </div>
+                            <div class="body">
+                              <p>Stuff in here.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="example hidden" data-group="containers" data-toggle="hero">
+                <h3>Hero Container</h3>
+                <div class="hero huge buffer-large">
+                  <h1>I Am Superman</h1>
+                  <p>A hero container is used as a attention grabbing, bold callout.</p>
+                </div>
+              </section>
+              <section class="example hidden" data-group="containers" data-toggle="navbar">
+                <h3>NavBar Container</h3>
+                <p>Bars for all the navs</p>
+              </section>
             </div>
           </div>
         </section>
-              
-        <section class="example-section">
-          <h2>Tables</h2>
-
-          <h3>Default Style &mdash; No classes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Basic Style &mdash; "table" class</h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <h3>Basic-Small Style &mdash; "table table-small" class</h3>
-          <table class="table table-small">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Striped &mdash; "table table-striped" class</h3>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Something</th>
-                <th>Else</th>
-                <th>Here</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Abc Def</td>
-                <td>Alpha Beta</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ghi Jkl</td>
-                <td>Gamma Delta</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mno Pqr</td>
-                <td>Super Duper Uber</td>
-              </tr>
-            </tbody>
-          </table>
-
-        </section>
-
-        <section class="example-section">
-          <h2>Forms</h2>
-
-          <form action="">
-
-            <label for="example-1">Input #1</label>
-            <input type="text" id="example-1">
-            <label for="example-2">Input #2</label>
-            <input type="text" id="example-2">
-            <label for="example-3">Input #3</label>
-            <input type="text" id="example-3">
-
-            <div class="actions">
-              <input type="submit" class="btn">
-            </div>
-            
-          </form>
-        </section>
-
-      </section> <!-- end .content -->
-      
-      <footer>
-
-        <nav class="pull-right">
-          <ul class="nav nav-footer">
-            <li><a href="#">Base</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Pages</a></li>
+      </article>
+    </section>
+    <footer class="shim-large-top">
+      <div class="container">
+        <nav>
+          <ul class="nav nav-bordered">
+            <li>
+              <a href="#intro">What is it?</a>
+            </li>
+            <li>
+              <a href="#grid">Grid</a>
+            </li>
+            <li>
+              <a href="#components">Components</a>
+            </li>
           </ul>
         </nav>
-
-        <h5 class="pull-left">&copy; Copyright 2012 Matt Duffy. All Rights Reserved.</h5>
-
-      </footer>
-      
-    </div> <!-- end #wrapper -->
-
-
+        <h5>&copy; Copyright 2013 Matt Duffy. All Rights Reserved.</h5>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/lib/jquery.js"><\/script>')</script>
+    <script>
+      window.jQuery || document.write('<\/script>')
+    </script>
     <script src="js/core.js"></script>
   </body>
-</html>
+</body>

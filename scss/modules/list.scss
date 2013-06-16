@@ -1,0 +1,56 @@
+// ============================================
+// List Styles
+// ============================================
+
+// variables
+
+// modifiers
+.unstyled {
+  padding-left: 0;
+
+  li { 
+    list-style: none; 
+  }
+
+  ul,ol {
+    padding-left: 10px;
+  }
+}
+
+// modules
+
+ul,ol {
+
+  ul,ol{
+    padding-left: 15px;
+  }
+}
+
+.list {
+  padding-left: 15px;
+
+  li {
+    padding-left: 5px;
+    margin: 5px 0;
+    list-style-position: outside;
+  }
+
+  ul,ol {
+    padding-left: 15px;
+  }
+}
+
+.list-horizontal {
+  margin-left: 0;
+
+  li {
+    @include inlineblock();
+
+    list-style: none;
+
+    &:first-child {
+      padding-left: 0px;
+    }
+
+  }
+}

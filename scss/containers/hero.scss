@@ -1,0 +1,26 @@
+// ============================================
+// Hero Container
+// ============================================
+
+//variables
+$heroBackground: $headingColor;
+$heroTextColor: $bodyColor;
+
+$heroBrandedBackground: $appSecondary;
+$heroBrandedTextColor: $headingColor;
+
+//container
+
+.hero {
+  background: $heroBackground;
+  h1,h2, p, li {
+    color: $heroTextColor;
+  }
+}
+
+.hero-branded {
+  background: $heroBrandedBackground;
+  h1,h2, p, li {
+    color: $heroBrandedTextColor;
+  }
+}

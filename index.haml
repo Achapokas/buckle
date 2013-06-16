@@ -1,0 +1,682 @@
+!!! 5
+%body
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Buckle
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "Matt Duffy", :name => "author"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "css/buckle.css", :rel => "stylesheet"}
+    %script{:src => "js/lib/modernizr.js"}
+  %body
+    %header
+      .container.clearfix
+        %h1.pull-left
+          %a{:href => "/"} Buckle
+        %nav.pull-right
+          %ul.nav.nav-feature
+            %li
+              %a{:href => "#intro"} What is it?
+            %li
+              %a{:href => "#grid"} Grid
+            %li
+              %a{:href => "#components"} Components
+
+    %section#intro.hero.medium
+      .container
+        .row
+          %article.span8
+            %h2 What is this?
+            %p
+              Buckle is a CSS template meant to be a starting point for any project &ndash; small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
+            %p
+              This is still very early in development and will grow and expand to slowly become a robust framework without providing too much. It's not meant to be used like Twitter Boostrap &ndash; as a CSS "Library". It is a framework, but its meant to be modified at its core on a project-to-project basis.
+    %section.container.content
+
+      %article#grid
+        %h2 Grid
+        %p Flexible. Nestable. Layout your pages in no time.
+        .row.row-test
+          .span12
+          .span6
+          .span6
+            .row
+              .span3
+              .span3
+          .span4
+          .span4
+          .span4
+          .span3
+          .span3
+          .span3
+          .span3
+          .span3
+          .span6
+          .span3
+            .row
+              .span2
+              .span1
+          .span3
+          .span9
+            .row
+              .span6
+              .span3
+          .span2
+          .span8
+          .span2
+          .span6
+          .span2
+          .span2
+          .span2
+          .span8
+          .span1
+          .span1
+          .span2
+
+
+
+      %article#components
+        %ul.nav.nav-box.shim-large
+          %li
+            %a.active{:href => "#modules", :data => {:action => "toggle", :target => "modules", :group => "components"}} Modules
+          %li
+            %a{:href => "#containers", :data => {:action => "toggle", :target => "containers", :group => "components"}} Containers
+        
+        %section{:data => {:toggle => "modules", :group => "components"}}
+          %h2.shim Modules
+          .row
+            .span3
+              %ul.nav.nav-vertical.nav-box
+                %li
+                  %a.active{:href => "#", :data => {:action => "toggle", :target => "lists", :group => "modules"}} Lists
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "navigation", :group => "modules"}} Navigation
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "dropdowns", :group => "modules"}} Dropdowns
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "tables", :group => "modules"}} Tables
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "forms", :group => "modules"}} Forms
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "buttons", :group => "modules"}} Buttons
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "alerts", :group => "modules"}} Alerts
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "modals", :group => "modules"}} Modals
+
+            .span9
+              %section.example{:data => {:toggle => "lists", :group => "modules"}}
+                %h3 Lists
+                %p When don't you need to list something for your website &ndash; features, instructions, summaries. There a necessity, and thats why Buckle provides you with a couple list types out of the box.
+
+                .row
+                  .span3
+                    %h4 Standard ul List
+                    %ul
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+                  .span3
+                    %h4 A "ul", class "unstyled"
+                    %ul.unstyled
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two - This is the second list item for the sublist under the second item in the main list.
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+                  .span3
+                    %h4 A "ul", class "list"
+                    %ol.list
+                      %li One
+                      %li 
+                        Two
+                        %ul
+                          %li Two One
+                          %li Two Two - This is the second list item for the sublist under the second item in the main list. 
+                      %li Three - The third item is the item that comes right after the second item, but two after the first item. Cool, right?
+
+                  .span6
+                    %h4 A "ul", class "list"
+                    %ul.list.list-horizontal
+                      %li One
+                      %li Two
+                      %li Three 
+                      %li Four 
+                      %li Five 
+              %section.example.hidden{:data => {:toggle => "navigation", :group => "modules"}}
+                %h3 Navigation
+                %p Any set of links should be considered a type of navigation. With the base types of navigation provided here, you should be able to get 90% to what your navigation will need to look like. By subclasses these classes, you should be able to achieve any type of navigation type with very few added lines of CSS.
+
+                .row
+                  .span4
+                    %h4 Basic Navigation
+                    %ul.nav
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Bordered Navigation
+                    %ul.nav.nav-bordered
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Box Navigation
+                    %ul.nav.nav-box
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span5
+                    %h4 Feature Navigation
+                    %ul.nav.nav-feature
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                  
+                  .span4
+                    %h4 Vertical Navigation
+                    %ul.nav.nav-vertical
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career
+
+                  .span4
+                    %h4 Putting it together
+                    %p look familiar?
+                    %ul.nav.nav-box.nav-vertical
+                      %li 
+                        %a{:href => "#"} Home
+                      %li 
+                        %a{:href => "#"} About
+                      %li 
+                        %a{:href => "#"} Products
+                      %li 
+                        %a{:href => "#"} Career                
+              %section.example.hidden{:data => {:toggle => "dropdowns", :group => "modules"}}
+                %h3 Dropdowns
+                
+                .row
+                  .span4
+                    %ul.nav
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span4
+                    %ul.nav.nav-box
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span9
+                    %h4 Vertical Navigation Dropdown 
+                  .span2
+                    
+                    %ul.nav.nav-vertical
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown.dropdown-vertical
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+
+                  .span3.offset2
+                    %ul.nav.nav-box.nav-vertical
+                      %li
+                        %a{:href => "#"} Home
+                      %li.dropdown.dropdown-vertical
+                        %a.link{:href => "#"} Products
+                        %ul.body
+                          %li
+                            %a{:href => "#"} Cars
+                          %li
+                            %a{:href => "#"} Trucks
+                          %li
+                            %a{:href => "#"} SUVs
+                      %li
+                        %a{:href => "#"} About
+              %section.example.hidden{:data => {:toggle => "tables", :group => "modules"}}
+                %h3 Tables
+            
+                %h4 Default Style &mdash; No classes
+                %table
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+              
+                %h4 Basic Style &mdash; "table" class
+                %table.table
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+                %h4 Striped &mdash; "table table-striped" class
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+                %h4 Basic-Small Style &mdash; "table table-small" class
+                %table.table.table-small
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+
+                %h4 Basic Table with Hover &mdash; "table table-hover" class
+                %table.table.table-hover
+                  %thead
+                    %tr
+                      %th Something
+                      %th Else
+                      %th Here
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Abc Def
+                      %td Alpha Beta
+                    %tr
+                      %td 2
+                      %td Ghi Jkl
+                      %td Gamma Delta
+                    %tr
+                      %td 3
+                      %td Mno Pqr
+                      %td Super Duper Uber
+              %section.example.hidden{:data => {:toggle => "forms", :group => "modules"}}
+                %h3 Forms
+                %form{:action => ""}
+
+                  .row
+                    .span3
+                      %label{:for => "example-1"} Input #1
+                      %input#example-1{:type => "text"}
+                      
+                      %label{:for => "example-2"} Input #2
+                      %textarea{:id => "example-2", :name => "exaplme-2"}
+
+                    .span3
+                      %label What are you interested in?:
+                      %label.label-checkbox{:for => "checkbox-1"} 
+                        %input{:type => "checkbox", :name => "checkbox-1", :id => "checkbox-1", :value => "1"}
+                        Checkbox 1
+
+                      %label.label-checkbox{:for => "checkbox-2"} 
+                        %input{:type => "checkbox", :name => "checkbox-2", :id => "checkbox-2", :value => "2"}
+                        Checkbox 2
+                  
+                      %label Pick One:
+                      %label.label-checkbox{:for => "radio-1"} 
+                        %input{:type => "radio", :name => "radios", :id => "radio-1", :value => "1"}
+                        Radio 1
+
+                      %label.label-checkbox{:for => "radio-2"} 
+                        %input{:type => "radio", :name => "radios", :id => "radio-2", :value => "2"}
+                        Radio 2
+
+                    .span3
+                      %label Size Fields with span* classes
+                      %input.span1#example-1{:type => "text"}
+                      %input.span2#example-1{:type => "text"}
+                      %input.span3#example-1{:type => "text"}
+
+                    .span6.clear
+                      %h4 Aligned Checkboxes/Radios
+
+                      .checkboxgroup
+                        %label.label-checkbox{:for => "checkbox-1"} 
+                          %input{:type => "checkbox", :name => "checkbox-1", :id => "checkbox-1", :value => "1"}
+                          Checkbox 1
+
+                        %label.label-checkbox{:for => "checkbox-2"} 
+                          %input{:type => "checkbox", :name => "checkbox-2", :id => "checkbox-2", :value => "2"}
+                          Checkbox 2
+
+                        %label.label-checkbox{:for => "checkbox-3"} 
+                          %input{:type => "checkbox", :name => "checkbox-3", :id => "checkbox-3", :value => "3"}
+                          Checkbox 3
+
+                      .checkboxgroup
+                        %label.label-checkbox{:for => "radio-1"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-1", :value => "1"}
+                          Radio Button 1
+
+                        %label.label-checkbox{:for => "radio-2"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-2", :value => "2"}
+                          Radio Button 2
+
+                        %label.label-checkbox{:for => "radio-3"} 
+                          %input{:type => "radio", :name => "radio", :id => "radio-3", :value => "3"}
+                          Radio Button 3
+
+                    .span3
+                      %h4 Prepend Inputs
+
+                      .input-prepend
+                        %span.prepend @
+                        %input#example-1{:type => "text"}
+
+                      %h4 Append Inputs
+
+                      .input-append
+                        %input#example-1{:type => "text"}
+                        %span.append .00
+
+                    .span6
+                      %h4 Field Group
+
+                      .fieldgroup
+                        %input.span2
+                        %select.span3
+                          %option Boom
+                          %option Bang
+                        %input.span1
+
+                      .fieldgroup
+                        %label
+                          City
+                          %input.span2
+
+                        %label
+                          State
+                          %input.span3
+                        %label
+                          Zip
+                          %input.span1
+
+                    .span9
+                      %h4 Togglebox Control
+
+                      .togglebox
+                        %select.box{:multiple => "multiple"}
+                          %option Uno
+                          %option Dose
+                          %option Three
+                        .toggleactions
+                          %a.btn{:href => "#", :data => {:action => "add"}} Add
+                          %a.btn{:href => "#", :data => {:action => "remove"}} Remove
+                        %select.box{:multiple => "multiple"}
+                      .togglefallback
+                        %select.box{:multiple => "multiple"}
+                          %option Uno
+                          %option Dose
+                          %option Three
+
+
+                  .actions
+                    %input.btn{:type => "submit", :value => "Submit"}
+                    %input.btn.btn-link{:type => "button", :value => "Cancel"}
+
+
+                %h4 Inline Form
+
+                %form.form-inline{:action => "/", :method => "get"}
+
+                  %label Search
+                  %input.span4{:type => "text", :placeholder => "who am I?"}
+                  %input.btn.btn-small{:type => "submit", :value => "Search"}
+
+
+
+              %section.example.hidden{:data => {:toggle => "buttons", :group => "modules"}}
+                %h3 Buttons
+                %p can be applied to input, button, or anchor tags
+                
+                %a.btn{:href => "#"} I'm a standard button
+                %a.btn.btn-secondary{:href => "#"} I'm a secondary action button
+                %a.btn.btn-link{:href => "#"} I'm a button styled like a link 
+
+                %h4 Modifiers
+                
+                .row
+                  .span4
+                    %h4 Small Button
+                    %a.btn.btn-small{:href => "#"} Save all changes
+                  .span5  
+                    %h4 Large Button
+                    %a.btn.btn-large{:href => "#"} Sign Up Today!
+                  .span9
+                    %h4 block-level
+                    %a.btn.btn-block{:href => "#"} I Accept the Terms &amp; Conditions. Lets Do This!
+              %section.example.hidden{:data => {:toggle => "alerts", :group => "modules"}}
+                %h3 Alerts
+                #alerts
+                  .alert
+                    Just gotta let you know about this.
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-success
+                    Something happended successfully!
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-warning
+                    Watch out! This is something to be careful about.
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+                  .alert.alert-error
+                    There was an error doing something!
+                    %a.close{"data-dismiss" => "alert", :href => "#"} &times;
+              %section.example.hidden{:data => {:toggle => "modals", :group => "modules"}}
+                %h3 Modal
+                %p You can turn any link into a trigger for a modal, simply by setting the data-action attribute of the link to "modal". You can then either set the href to a section of content hidden on the page, or load something remotely with AJAX by setting the data-url property of the link.
+                %a.btn{"data-action" => "modal", :href => "#some_content"} Load Local Content
+                %a.btn{:data => {:action => "modal", :url => "ajax.html"}, :href => "#"} Load Remote Content
+                #some_content.hidden
+                  %h2 This is modal content!
+                  %p
+                    Modals can load content hidden on the page or load content through AJAX by giving the link a data-url attribute with the url of the content you want to load.
+                .modal.hidden
+                  .wrapper.hidden
+                    .header.clearfix
+                      %span.title
+                      %a.btn-close{"data-action" => "dismiss", :href => "#"} &times;
+                    %section.body
+                  .loader.hidden
+
+        %section.hidden{:data => {:toggle => "containers", :group => "components"}}
+          %h2.shim Containers
+          .row
+            .span3
+              %ul.nav.nav-vertical.nav-box
+                %li
+                  %a.active{:href => "#", :data => {:action => "toggle", :target => "highlevel", :group => "containers"}} High Level
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "widget", :group => "containers"}} Widget
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "hero", :group => "containers"}} Hero
+                %li
+                  %a{:href => "#", :data => {:action => "toggle", :target => "navbar", :group => "containers"}} NavBar
+            .span9
+              %section.example{:data => {:toggle => "highlevel", :group => "containers"}}
+                %h3 High Level Containers
+                %p The high level containers file holds some of your most outer containers used as a standard for marking-up your Buckle friendly HTML pages. Header, Footer, and your Content area will sometimes call for some unique padding, colors, and overall style properties. This is where those should go. By default, there is little to nothing in this file; it merely serves as a reminder to where that stuff belongs when you go to add it. You are welcome :P
+              %section.example.hidden{:data => {:toggle => "widget", :group => "containers"}}
+                %h3 Widget Containers
+               
+                .row
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+
+                  .span3 
+                    .widget
+                      .title
+                        %h4 Some Title
+                      .body
+                        %p Stuff in here.
+
+                  .span9
+                    %h4.shim Widget Group
+
+                    .row
+                      .span3
+                        .widgetgroup
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here.
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here. 
+                          .widget
+                            .title
+                              %h4 Some Title
+                            .body
+                              %p Stuff in here.
+              %section.example.hidden{:data => {:toggle => "hero", :group => "containers"}}
+                %h3 Hero Container
+                
+                .hero.huge.buffer-large
+                  %h1 I Am Superman
+                  %p A hero container is used as a attention grabbing, bold callout.
+              %section.example.hidden{:data => {:toggle => "navbar", :group => "containers"}}
+                %h3 NavBar Container
+                %p Bars for all the navs
+
+
+    %footer.shim-large-top
+      .container
+        %nav
+          %ul.nav.nav-bordered
+            %li
+              %a{:href => "#intro"} What is it?
+            %li
+              %a{:href => "#grid"} Grid
+            %li
+              %a{:href => "#components"} Components
+        %h5 &copy; Copyright 2013 Matt Duffy. All Rights Reserved.
+
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<\/script>')
+    %script{:src => "js/core.js"}

@@ -2,9 +2,16 @@
 // Form
 // ============================================
 
-// ============================================
-// Form
-// ============================================
+//variables
+$formLabelColor: $appPrimary;
+$formInputColor: $textColor;
+$formBorderColor: $appBorderColor;
+$formFocusBorderColor: $appPrimary;
+$formInputBackground: lighten($appShadeColor, 5);
+$formRadius: $appRadius;
+$formInputPadding: 3px 5px;
+
+//module
 
 form {
   .actions {
@@ -15,14 +22,41 @@ form {
 label {
   display: block;
   margin: 10px 0 5px;
-  color: $appTertiary;
+  color: $formLabelColor;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+  }
+}
+
+.label-checkbox {
+  color: $formInputColor;
 }
 
 input, textarea, select {
-  color: $appQuaternaryText;
-  padding: 3px 5px;
-  border: 1px solid $appTertiary;
-  @include gradient(#fff, $appQuaternaryLight); //needs adjustment
+  color: $formInputColor;
+  padding: $formInputPadding;
+  border: 1px solid $formBorderColor;
+  background: $formInputBackground;
+  @include addPrefix(border-radius, $formRadius);
+
+  &:focus {
+    outline: none;
+    border-color: $formFocusBorderColor;
+  }
+
+  &[class*="span"] {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+textarea {
+  height: 100px;
+  resize: none;
 }
 
 input[type="file"] {
@@ -30,28 +64,84 @@ input[type="file"] {
   background: transparent;
 }
 
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
-
 select[multiple] {
   overflow: auto;
 }
 
-//login
+.checkboxgroup {
+  label {
+    @include inlineblock();
+    margin-left: 15px;
 
-.form-login {
-  background: $appQuaternaryLight;
-  padding: 20px;
-  @include addPrefix(border-radius, 5px);
-  position: absolute;
-  @include addPrefix(animation, slideIn 1.5s);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
 
-  h3 {
-    color: $appQuaternary;
+.fieldgroup {
+  
+  input, select, label {
+    @include inlineblock();
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  } 
+
+  label {
+    input,select {
+      display: block;
+    }
+  }
+}
+
+.input-prepend,
+.input-append {
+  display: block;
+
+  .append, .prepend, input {
+    @include inlineblock();
+  }
+
+  .append, .prepend {
+    background: $formLabelColor;
+    color: $formInputBackground;
+    padding: $formInputPadding;
+    border: 1px solid $formLabelColor;
+  }
+}
+
+.input-prepend {
+  .prepend {
+    @include addPrefix(border-radius, $formRadius 0 0 $formRadius);
+  }
+  input {
+    @include addPrefix(border-radius, 0 $formRadius $formRadius 0);
+    margin-left: -4px;
+  }
+}
+
+.input-append{
+  .append {
+    @include addPrefix(border-radius, 0 $formRadius $formRadius 0 );
+    margin-left: -4px;
+  }
+  input {
+    @include addPrefix(border-radius, $formRadius 0 0 $formRadius);
+  }
+}
+
+.form-inline {
+
+  label, input, select {
+    @include inlineblock();
+    vertical-align: middle;
+  }
+  label {
+    vertical-align: baseline;
+    margin-right: 5px;
   }
 }
 
@@ -64,45 +154,4 @@ select[multiple] {
   select {
     width: 25%;
   }
-}
-
-//togglebox
-
-.no-js .togglebox { display: none; }
-.js .togglefallback { display: none; }
-
-.togglebox {
-  @include applyClearfix();
-
-  .box {
-    width: 38%;
-
-    p {
-      margin: 3px;
-      color: $appSecondaryLight;
-
-    }
-  }
-
-  .box,
-  .toggleactions {
-    float: left;
-  }
-
-  select {
-    padding: 10px;
-    width: 100%;
-  }
-
-}
-
-.toggleactions {
-  width: 24%;
-  padding: 30px 20px 10px;
-  text-align: center;
-
-  a {
-    margin: 5px 10px;
-  }
-
 }

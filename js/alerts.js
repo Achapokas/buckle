@@ -1,7 +1,3 @@
-// ============================================
-// Alerts
-// ============================================
-
 app.alerts = (function ($, global, alertSelector) {
  
   var _this, alertContainer, delayed

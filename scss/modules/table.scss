@@ -1,3 +1,19 @@
+// ============================================
+// Tables
+// ============================================
+
+//variables
+$tableHeadColor: $appSecondary;
+
+$tableBtnRadius: $appRadius;
+$tableBorderColor: $appBorderColor;
+$tableStripeColor: $appShadeColor;
+$tableStripeHeadColor: $appPrimary;
+$tableHoverColor: $appSecondaryLight;
+$tableHoverTextColor: $bodyColor;
+
+//modules
+
 table {
   width: 100%;
 }
@@ -13,21 +29,22 @@ td, th {
 
 .table {
   border-collapse: separate;
-  border: 1px solid #DDD;
-  @include addPrefix(border-radius, 5px);
+  border: 1px solid $tableBorderColor;
+  @include addPrefix(border-radius, $tableBtnRadius);
 
   thead {
-    @include addPrefix(border-radius, 5px 5px 0 0);
+    @include addPrefix(border-radius, $tableBtnRadius $tableBtnRadius 0 0);
+    color: $tableHeadColor;
   }
 
   tbody, 
   tbody tr:last-child {
-    @include addPrefix(border-radius, 0 0 5px 5px);
+    @include addPrefix(border-radius, 0 0 $tableBtnRadius $tableBtnRadius);
   }
 
   td, th {
-    border-top: 1px solid #DDD;
-    border-left: 1px solid #DDD;
+    border-top: 1px solid $tableBorderColor;
+    border-left: 1px solid $tableBorderColor;
   }
 
   td:first-child,
@@ -43,6 +60,23 @@ td, th {
 
 }
 
+.table-striped {
+
+  thead {
+    background: $tableStripeHeadColor;
+    color: #fff;
+  }
+  tbody {
+    tr:nth-child(odd){
+      background: #fff;
+    }
+    tr:nth-child(even) {
+      background: $tableStripeColor;
+    }
+
+  }
+}
+
 .table-small {
   font-size: .8em;
   td, th {
@@ -50,18 +84,11 @@ td, th {
   }
 }
 
-.table-striped {
-
-  thead {
-    background: #DDD;
-  }
+.table-hover {
   tbody {
-    tr:nth-child(odd){
-      background: #fff;
+    tr:hover {
+      background: $tableHoverColor;
+      color: $tableHoverTextColor;
     }
-    tr:nth-child(even) {
-      background: #f3f3f3;
-    }
-
   }
 }

@@ -2,52 +2,34 @@
 // Variables
 // ============================================
 
-$columns: 12;
-$columnWidth: 60px; // 6.383%;
-$gutter: 20px; //2.127%;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400);
 
-$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
+$baseFont: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$brandFont: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
-$baseFont: Helvetica, Arial, sans-serif;
-$brandFont: Helvetica, Arial, sans-serif ;
+$appRadius: 3px;
 
-$btnRadius: 3px;
+$appBorderColor: #DDD;
+$appShadeColor: #EEE;
+
 $darkBackground: #000000;
 $lightBackground: #797979;
 
+$bodyColor : #ffffff;
 
 //Primary
-$appPrimary: #333;
+$appPrimary: #7acf72;
 $appPrimaryLight: lighten($appPrimary, 20);
 $appPrimaryDark: darken($appPrimary, 20);
 
 //Secondary
-$appSecondary: #55a8d7;
-$appSecondaryLight: lighten($appSecondary, 30);
-$appSecondaryDark: darken($appSecondary, 20);
+$appSecondary: #e18c46;
+$appSecondaryLight: #fcb968;
+$appSecondaryDark: #9f6232;
 
 $appSecondaryText: #002157;
 
 //Tertiary
 $appTertiary: #999;
 $appTertiaryLight: #CCC;
-
-
-//Quaternary
-$appQuaternary: #aaaaaa;
-$appQuaternaryLight: #f8f8f8;
-$appQuaternaryDark: #363636;
-
-$appQuaternaryText: #7f7f7f;
-
-//alert colors
-
-$alertSuccess: #85b96b;
-$alertSuccessBg: lighten($alertSuccess, 30);
-
-$alertError: #d07161;
-$alertErrorBg: lighten($alertError, 30);
-
-$alertNotice: #55a8d7;
-$alertNoticeBg: lighten($alertNotice, 30);
 

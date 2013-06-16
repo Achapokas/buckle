@@ -1,0 +1,43 @@
+// ============================================
+// Widget Container 
+// ============================================
+
+//variables
+$widgetBorderColor: $appBorderColor;
+$widgetHeaderColor: $appPrimary;
+$widgetTitleColor: $bodyColor;
+
+$widgetPadding: 5px 10px;
+$widgetRadius: $appRadius;
+
+
+//container
+
+.widget {
+  
+  .title {
+    padding: $widgetPadding;
+    background: $widgetHeaderColor;
+    border: 1px solid $widgetHeaderColor;
+    @include addPrefix(border-radius, $widgetRadius $widgetRadius 0 0);
+
+    h3,h4,h5 {
+      color: $widgetTitleColor;
+      margin: 0;
+    }
+  }
+
+  .body {
+    padding: $widgetPadding;
+    border: 1px solid $widgetBorderColor;
+    border-top: 0;
+    @include addPrefix(border-radius, 0 0 $widgetRadius $widgetRadius);
+  }
+}
+
+.widgetgroup {
+  .widget:not(:last-child) .body,
+  .widget:not(:first-child) .title {
+    @include addPrefix(border-radius, 0);
+  }
+}

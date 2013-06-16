@@ -7,21 +7,34 @@
 .clear-right {clear:right; }
 .clearfix { @include applyClearfix(); }
 
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+
+.tiny   { font-size: .5em;  }
+.small  { font-size: .75em; }
+.medium { font-size: 1.25em;}
+.large  { font-size: 2em;   }
+.huge   { font-size: 3em;   }
+
 .pull-left { float: left;}
 .pull-right {float: right;}
 
-.unstyled {
-  padding-left: 0;
-  list-style: none;
-}
+.hidden { display: none !important; }
+.inivisible { visibility: hidden !important; }
 
-.hidden {
-  display: none !important;
-}
+.affix { position: fixed; }
 
-.affix {
-  position: fixed;
-}
+.shim         { margin: $shim 0 !important; }
+.shim-top     { margin-top: $shim !important; }
+.shim-bottom  { margin-bottom: $shim !important; }
+
+.shim-large         { margin: $shimLarge 0 !important; }
+.shim-large-top     { margin-top: $shimLarge !important; }
+.shim-large-bottom  { margin-bottom: $shimLarge !important; }
+
+.buffer { padding: 10px; }
+
+.buffer-large { padding: 20px; }
 
 // symbols
 

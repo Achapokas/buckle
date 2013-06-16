@@ -1,7 +1,7 @@
 Buckle 
 =======
 
-__version 0.0.1__
+__version 0.5.0__
 
 Buckle is a CSS template meant to be a starting point for any project -- small or big. It's built loosely like Twitter Bootstrap, uses Normalize, and sticking to my own variation of modular CSS architecture. It's broken into three style types.
 
@@ -11,7 +11,7 @@ This is still very early in development and will grow and expand to slowly becom
 License
 ----------
 
-Copyright 2012 Matt Duffy
+Copyright 2013 Matt Duffy
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

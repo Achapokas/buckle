@@ -2,21 +2,105 @@
 // Navigation
 // ============================================
 
+//variables
+$navBackground: $bodyColor;
+$navBorderColor: $appBorderColor;
+$navHoverColor: $appShadeColor;
+$navBorderRadius: $appRadius;
+
+$navSidePadding: 10px;
+
+//modules
+
 .nav {
   @extend .unstyled;
   margin: 0;
 
   li {
-    display: inline-block;
-    padding: 5px 0px 5px 10px;
+    @include inlineblock();
 
     &:first-child {
       padding-left: 0;
     }
+
+    margin-left: -4px;
+  }
+
+  a {
+    display: block;
+    padding: 5px $navSidePadding;
   }
 }
 
-.nav-main {
+.nav-vertical {
+
+  li {
+    display: block;
+    padding: 0;
+
+    &:first-child {
+      padding: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 5px $navSidePadding;
+
+    &:hover {
+      background: $navHoverColor;
+    }
+  }
+}
+
+.nav-box {
+  
+  a {
+    background: $navBackground;
+    text-decoration: none;
+    border: 1px solid $navBorderColor;
+    border-width: 1px 1px 1px 0;
+
+    &:hover {
+      background: $navHoverColor;
+    }
+    &.active {
+      background: $linkColor;
+      border-color: $linkColor;
+      color: white;
+    }
+  }
+
+  li {
+    &:first-child {
+      a { 
+        border-width: 1px;
+        @include addPrefix(border-radius, $navBorderRadius 0 0 $navBorderRadius); 
+      }
+    }
+    &:last-child {
+      a { @include addPrefix(border-radius, 0 $navBorderRadius $navBorderRadius 0); }
+    }
+  }
+
+  &.nav-vertical {
+
+    a {
+      border-width: 0px 1px 1px;
+    }
+
+    li {
+      &:first-child {
+        a { @include addPrefix(border-radius, $navBorderRadius $navBorderRadius 0 0); }
+      }    
+      &:last-child {
+        a { @include addPrefix(border-radius, 0 0 $navBorderRadius $navBorderRadius); }
+      }
+    }
+  }
+}
+
+.nav-feature {
   font-family: $brandFont;
   font-size: 1.5em;
   font-weight: normal;
@@ -41,16 +125,14 @@
   }
 }
 
-.nav-footer {
+.nav-bordered {
 
-  float: right;
-  margin-top: -5px;
+  li { padding: 5px 0; }
 
   a {
-    color: $appSecondary;
-    border-left: 1px solid $appSecondary;
+    border-left: 1px solid $navBorderColor;
     padding-left: 8px;
-    margin-left: -4px;
+    padding: 0 10px;
   }
 
   li:first-child a {

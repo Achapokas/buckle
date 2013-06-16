@@ -2,6 +2,18 @@
 // Layout
 // ============================================
 
+//variables
+
+$columns: 12;
+$columnWidth: 60px; // 6.383%;
+$gutter: 20px; //2.127%;
+
+$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
+
+$shim: 15px;
+$shimLarge: 30px;
+
+
 * { @include addPrefix(box-sizing, border-box); }
 
 .row {
@@ -18,6 +30,11 @@
   height: 20px;
   margin-bottom: 10px;
   background: $appPrimary;
+
+  .row [class^="span"] { 
+    background: #666; 
+    height: 10px;
+  }
 }
 
 [class^="span"] {
@@ -32,42 +49,15 @@
 
     .span#{$i}  { 
       width: ($columnWidth * $i) + ($gutter * ($i - 1));
+
+      .row { width: ($columnWidth * $i) + ($gutter * ($i - 1)) + $gutter; }
     }
     .offset#{$i} { margin-left: ($columnWidth * $i) + ($gutter * ($i + 1));}
 }
 
-.wrapper, 
 .container {
   width: $pageWidth;
   padding: $gutter;
   margin: 0 auto;
 }
 
-
-// ============================================
-// High Level Areas
-// ============================================
-
-header,
-.content,
-footer {
-  @include applyClearfix();
-}
-
-//header
-
-header {
-
-}
-
-//content
-
-.content {
-
-}
-
-//footer
-
-footer {
-
-}
